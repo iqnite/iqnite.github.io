@@ -103,8 +103,8 @@ footer {
 }
 
 .welcome-banner {
-    color: black;
-    text-shadow: 0 0 10px white;
+    color: #5bea75;
+    text-shadow: 0 0 10px black;
     background-image: url(images/blurred_banner.webp);
 }
 
