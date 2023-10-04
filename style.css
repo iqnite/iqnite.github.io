@@ -3,7 +3,6 @@ body {
     padding: 0;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: #121212;
     color: white;
@@ -14,12 +13,15 @@ a {
     color: #00e503;
 }
 
-h1,
 h2 {
     color: #5bea75;
 }
 
-.header {
+iframe {
+    border: none;
+}
+
+header {
     background-image: url("images/hex.png");
     width: 100%;
     display: flex;
@@ -29,7 +31,7 @@ h2 {
 
 .header-links {
     width: 100%;
-    margin: 5px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,6 +60,11 @@ h2 {
     color: black;
 }
 
+footer {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .new-banner {
     width: 100%;
     display: flex;
@@ -67,31 +74,42 @@ h2 {
 }
 
 .new-banner>img {
-    width: 100%
+    width: 60%
 }
 
 .new-banner-text {
-    margin: 5em;
-    padding: 5em;
-    width: 50%;
+    margin: 5px;
+    padding: 10px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: right;
 }
 
+.activity {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00e5bf64;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .label {
+    color: #5bea75;
     width: fit-content;
     position: relative;
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     border-radius: 5px;
-    color: black;
     background: #00e503;
     overflow: hidden;
-    border: 2px #00e503;
-    outline: 2px #ffd81700;
-    background: linear-gradient(90deg, #5bea75, #72ffd9);
+    border: 5px solid #5bea75;
+    outline: 2px #5bea75;
+    border-color: #5bea75;
+    background: #ffd81700;
 }
 
 .fancy-button {
