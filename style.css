@@ -1,13 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: Helvetica;
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
     background: #121212;
     color: white;
 }
@@ -17,11 +14,118 @@ a {
     color: #00e503;
 }
 
-h1 {
+a:hover {
+    color: black;
+    border-radius: 3px;
+    background-color: #00e503;
+    box-shadow: 0 0 10px #00e503;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+h2 {
     color: #5bea75;
 }
 
+header {
+    background-image: url("images/hex.png");
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-links {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.header-links>a>img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-logo>a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.header-logo>a>img {
+    padding: 1em;
+    margin: 1em;
+}
+
+.header-logo>a>h1 {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.new-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.new-banner>img {
+    width: 60%
+}
+
+.new-banner-text {
+    margin: 5px;
+    padding: 10px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.activity {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00e5bf64;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-banner {
+    color: black;
+    text-shadow: 0 0 10px white;
+    background-image: url(images/blurred_banner.webp);
+}
+
+.label {
+    color: #5bea75;
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #00e503;
+    overflow: hidden;
+    border: 2px solid #5bea75;
+    outline: 2px #5bea75;
+    border-color: #5bea75;
+    background: #ffd81700;
+}
+
 .fancy-button {
+    width: fit-content;
     position: relative;
     display: inline-block;
     padding: 7px 18px;
@@ -52,8 +156,6 @@ h1 {
     animation: rippleanimate 0.4s linear infinite;
 }
 
-
-
 @keyframes bubble {
     0% {
         transform: scale(1);
@@ -80,4 +182,50 @@ h1 {
         height: 500px;
         opacity: 0;
     }
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    right: 10%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+._tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
