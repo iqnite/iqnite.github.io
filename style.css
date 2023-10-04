@@ -4,7 +4,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     background: #121212;
     color: white;
 }
@@ -14,12 +14,16 @@ a {
     color: #00e503;
 }
 
-h2 {
-    color: #5bea75;
+a:hover {
+    color: black;
+    border-radius: 3px;
+    background-color: #00e503;
+    box-shadow: 0 0 10px #00e503;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
-iframe {
-    border: none;
+h2 {
+    color: #5bea75;
 }
 
 header {
@@ -98,6 +102,12 @@ footer {
     text-align: center;
 }
 
+.welcome-banner {
+    color: black;
+    text-shadow: 0 0 10px white;
+    background-image: url(images/blurred_banner.webp);
+}
+
 .label {
     color: #5bea75;
     width: fit-content;
@@ -108,7 +118,7 @@ footer {
     border-radius: 5px;
     background: #00e503;
     overflow: hidden;
-    border: 5px solid #5bea75;
+    border: 2px solid #5bea75;
     outline: 2px #5bea75;
     border-color: #5bea75;
     background: #ffd81700;
