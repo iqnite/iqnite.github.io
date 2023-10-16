@@ -108,6 +108,12 @@ footer {
     background-image: url(images/blurred_banner.webp);
 }
 
+.welcome-banner:hover {
+    background-image: none;
+    color: white;
+    text-shadow: none;
+}
+
 .label {
     color: #5bea75;
     width: fit-content;
