@@ -9,6 +9,10 @@ body {
     color: white;
 }
 
+ul {
+    text-align: start;
+}
+
 a {
     text-decoration: none;
     color: #00e503;
@@ -24,6 +28,14 @@ a:hover {
 
 h2 {
     color: #5bea75;
+}
+
+h4 {
+    color: #5bea75;
+}
+
+h5 {
+    font-size: medium;
 }
 
 header {

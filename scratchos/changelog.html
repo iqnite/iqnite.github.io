@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Changelog | ScratchOS</title>
+    <link rel="icon" href="../images/scratchos_logo.svg" type="image/svg" sizes="16x16">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1><a href="index.html"><img src="../images/scratchos_logo.svg"></img> ScratchOS</a></h1>
+
+    <h1>Update Log:</h1>
+
+    <h4 id="v3.4.1">What's new in v3.4.1 <mark>Latest</mark> <small><i>(17. 9. 2023)</i></small></h4>
+    <h5>Changes & improvements:</h5>
+    <ul>
+        <li>App Store: Background now matches the system's color settings</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>Fixed a bug that reset alarms on startup</li>
+        <li>Fixed a bug that didn't allow to click the notifications button with "auto-hide taskbar" enabled</li>
+    </ul>
+
+    <h4 id="v3.4.0">What's new in v3.4.0 <small><i>(13. 9. 2023)</i></small></h4>
+    <h5>New features:</h5>
+    <ul>
+        <li>New app: Speed tester (allows to run CPS, FPS, FLOPS, and Cloud speed tests)</li>
+        <li>Data is no longer deleted at every startup</li>
+    </ul>
+    <h5>Changes & improvements:</h5>
+    <ul>
+        <li>The panel now has floating edges</li>
+        <li>Translator: If no language is specified, it will use your Scratch language</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>Enabling turbo mode should no longer make the screen glitch</li>
+        <li>Many other bug fixes regarding the system kernel</li>
+    </ul>
+    <h5>Removed features:</h5>
+    <ul>
+        <li>Legacy speed test (use the new Speedtest app)</li>
+        <li>Command line (was dangerous)</li>
+    </ul>
+
+    <h4 id="v3.3.1">What's new in v3.3.1 <small><i>(16. 2. 2023)</i></small></h4>
+    <h5>Changes & improvements:</h5>
+    <ul>
+        <li>Light/dark mode doesn't affect the home screen anymore</li>
+        <li>Added experimental support for forkphorus when pressing [x] on the error page</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>Fixed volume/internet displays not hiding when dismissing them</li>
+        <li>Music: Fixed some songs not playing</li>
+    </ul>
+    <h5>Removed features:</h5>
+    <ul>
+        <li>Paint: Removed Brightness slider because of issues with the Save/Load system (the feature is still available
+            with Dev mode)</li>
+    </ul>
+    <br />
+
+    <h4>What's new in v3.3.0 <small><i>(8. 2. 2023)</i></small></h4>
+    <h5>New features:</h5>
+    <ul>
+        <li>Re-added microphone volume display to Volume button in taskbar</li>
+        <li>Music: Added ability to play/pause sounds</li>
+        <li>Music: Added new song</li>
+        <li>Paint: Added ability to change brightness and saturation</li>
+        <!--<li>WiFi button now shows internet connection details (thanks @asesavagejr)</li>-->
+    </ul>
+    <h5>Changes and improvements:</h5>
+    <ul>
+        <li>Paint: Sliders now hide when clicking outside</li>
+        <li>Now a warning is shown when trying to save a Notepad file containing placeholder strings</li>
+        <li>Login is no longer required to use Dev mode</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>Paint: Fixed some painting lines not saving</li>
+    </ul>
+    <h5>Known issues:</h5>
+    <ul>
+        <li>Music pause only works properly on TurboWarp with <code>no-limits</code> enabled and on the web player</li>
+    </ul>
+    <br />
+
+
+    <h4>What's new in v3.2.5 <small><i>(15. 12. 2022) </i></small></h4>
+    <h5>Changes & improvements:</h5>
+    <ul>
+        <li>Meower: Chat notifications are now shown in taskbar</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>SpaceGame: fixed background showing only in Color theme</li>
+        <li>Fixed Network icon shwoing connection even when you're not logged in</li>
+    </ul>
+    <h5>Known issues:</h5>
+    <ul>
+        <li>Notepad + Translate: read aloud doesn't support more than 128 characters.</li>
+        <li>Gobo: voice output ignores actual volume</li>
+        <li>Gobo: when <i>Auto-hide taskbar</i> is enabled, the Gobo icon is hidden even if the Gobo app is opened</li>
+        <li>Calculator: exponents with point return wrong results</li>
+    </ul>
+    <br />
+
+
+    <h4>What's new in v3.2.4 <small><i>(14. 12. 2022) </i></small></h4>
+    <h5>Changes & improvements:</h5>
+    <ul>
+        <li>Taskbar color now synces with system theme</li>
+    </ul>
+    <h5>Bug fixes:</h5>
+    <ul>
+        <li>Fixed taskbar showing in auto-hide mode even if it was not hovered</li>
+        <li>Notepad: fixed narrator button showing in translator</li>
+    </ul>
+    <br />
+
+    <h4>What's new in v3.2.3:</h4>
+    <p>- New features:</p>
+    <p> Narrator button in Notepad</p>
+    <p>- Improved features:</p>
+    <p> Improved Gobo layout</p>
+    <p> The system now restores apps when loading a save code</p>
+    <p> A sound preview is now played when dismissing the volume control</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed loaction of apps from the store</p>
+    <p> The username now shows on click instead of hover</p>
+    <p>- Developmental changes:</p>
+    <p> ScratchOS now suspends not critical background tasks to save memory</p>
+    <br>
+
+
+    <h4>What's new in v3.2.2:</h4>
+    <p>- Removed features:</p>
+    <p> Removed Camera app due to Scratch's new privacy policies</p>
+    <br>
+    <h4>What's new in v3.2.1:</h4>
+    <p>- New features:</p>
+    <p> Pressing Ctrl+Backspace now saves the user's data</p>
+    <p>- Improved features:</p>
+    <p> Significantly improved saving speed</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed painting import pen width</p>
+    <p> Fixed a bug that left the save dialog open after opening an app</p>
+    <br>
+
+    <h4>What's new in v3.2.0:</h4>
+    <p>- New features:</p>
+    <p> Added ability to save and load data through the shutdown menu</p>
+    <p> Added new option that automatically hides the taskbar when not hovered</p>
+    <p>- Improved features:</p>
+    <p> New logo, background, startup sound, and loading screen</p>
+    <p> Improved notifications</p>
+    <p> App versions are now shown only in Dev mode</p>
+    <p>- Developmental changes:</p>
+    <p> Refactored old scripts and deleted useless and orphaned blocks</p>
+    <br>
+
+    <h4>What's new in v3.1.7:</h4>
+    <p>- Improved features:</p>
+    <p> Speed test now shows a speed rating from 1 to 5</p>
+    <p> Improved loading screen</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed contrast of loading animation</p>
+    <br>
+
+    <h4>What's new in v3.1.6:</h4>
+    <p>- New features:</p>
+    <p> Added color picker on paint app</p>
+    <p> Added FPS counter to Dev Mode</p>
+    <p> Added scripting error messages</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed a bug that didn't make ScratchOS shut down</p>
+    <p>- Developmental changes:</p>
+    <p> Improved Turbo Mode detection algorithm</p>
+    <br>
+
+    <h4>What's new in v3.1.5:</h4>
+    <p>- Improved features:</p>
+    <p> Now the alarm has Gobo's reminder sound</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed alarm notifications disappearing when opening the homescreen</p>
+    <br>
+
+    <h4>What's new in v3.1.4:</h4>
+    <p>- Bug fixes:</p>
+    <p> Fixed app installer</p>
+    <br>
+
+    <h4>What's new in v3.1.3:</h4>
+    <p>- New features:</p>
+    <p> Now you can uninstall apps from the app store</p>
+    <br>
+
+    <h4>What's new in v3.1.2:</h4>
+    <p>- Improved features:</p>
+    <p> Improved button design</p>
+    <p> The WiFi menu now shows the URL of the connected cloud server</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed transparency of taskbar</p>
+    <br>
+
+    <h4>What's new in v3.1.1:</h4>
+    <p>- Improved features:</p>
+    <p> Improved loading screen</p>
+    <p> Changed the Home keyboard shortcut from [Esc] to [Home] because it made ScratchOS exit from fullscreen mode</p>
+    <p> Added shutdown menu animation</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed a bug that showed the background in all apps</p>
+    <p> Fixed a bug that opened the home screen when pressing the home shortcut during the shutdown</p>
+    <p> Fixed layout of the settings page</p>
+    <br>
+
+    <h4>What's new in v3.1.0:</h4>
+    <iframe width="424" height="238" src="https://www.youtube.com/embed/BLuBt648SOQ" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <p>- New features:</p>
+    <p> You can now change the background of the home screen</p>
+    <p> Seconds are now shown on the taskbar clock (Needs to be enabled in settings)</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed clock app layout</p>
+    <br>
+
+    <h4>What's new in v3.0.1:</h4>
+    <p>- New features:</p>
+    <p> Added mouse feedback</p>
+    <p>- Improved features:</p>
+    <p> Improved taskbar design</p>
+    <p> More touch-friendly buttons</p>
+    <p> Improved Settings page layout</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed Translate app</p>
+    <p>- Developmental changes:</p>
+    <p> Added XAI support for App Store and BitToys</p>
+    <br>
+
+    <h4>What's new in v3.0.0:</h4>
+    <iframe width="424" height="238" src="https://www.youtube.com/embed/QLDNZP0LPYI" title="ScratchOS X Intro"
+        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <p>- New features:</p>
+    <p> Added Clock app</p>
+    <p> Added taskbar</p>
+    <p> Added Gobo to taskbar</p>
+    <p> Added Wi-Fi icon to taskbar</p>
+    <p> Added user icon to homescreen</p>
+    <p>- Improved features:</p>
+    <p> Volume slider shows when clicking the icon in the taskbar</p>
+    <p> Notifications now hide when clicked</p>
+    <p> Clock fixed in taskbar</p>
+    <p> Settings page background now changes with the system</p>
+    <p> Improved design of load screens</p>
+    <p>- Removed features:</p>
+    <p> Removed Video app because of extreme storage requirements. You can still view the video <a
+            href="https://scratch.mit.edu/projects/523076653" target="_blank">here</a>.
+    <p>- Developmental changes:</p>
+    <p> Improved definitions of variables</p>
+    <br>
+
+    <h4>What's new in v2.8.3:</h4>
+    <p>- Improved features:</p>
+    <p> Improved performance</p>
+    <p>- Developmental changes:</p>
+    <p> Improved sprite names</p>
+    <br>
+
+    <h4>What's new in v2.8.2:</h4>
+    <p>- New features:</p>
+    <p> Added keyboard shortcuts (only in the <a href="index.html" target="_blank">ScratchOS web
+            player</a>). Use ESC to go to the homescreen, Ctrl + Up/Down to change the volume, and Ctrl + Backspace to
+        shut down</p>
+    <br>
+
+    <h4>What's new in v2.8.1:</h4>
+    <p>- Bug fixes:</p>
+    <p> Fixed background</p>
+    <p> Fixed installer</p>
+    <br>
+
+    <h4>What's new in v2.8.0:</h4>
+    <p>- New features:</p>
+    <p> Added App Store</p>
+    <br>
+
+    <h4>What's new in v2.7.1:</h4>
+    <p>- Bug fixes:</p>
+    <p> Fixed notification bug</p>
+    <br>
+
+    <h4>What's new in v2.7.0:</h4>
+    <p>- New features:</p>
+    <p> Added Meower Chat app</p>
+    <br>
+
+    <h4>What's new in v2.6.2:</h4>
+    <p>- New features:</p>
+    <p> Added "Dev Mode" to see features that are still in development</p>
+    <p> Added settings for volume slider</p>
+    <br>
+
+    <h4>What's new in v2.6.1:</h4>
+    <p>- New features:</p>
+    <p> Added more instruments in Piano app</p>
+    <p>- Improved features:</p>
+    <p> Rounded app icons</p>
+    <p> Improved Calculator</p>
+    <p> Enhanced Gobo's AI to allow more natural chats</p>
+    <p> New sound for reminds</p>
+    <p> Improved load speed</p>
+    <p>- Bug fixes:</p>
+    <p> Several bug fixes</p>
+    <br>
+
+    <h4>What's new in v2.6.0:</h4>
+    <p>- New features:</p>
+    <p> Added News app</p>
+    <p>- Improved features:</p>
+    <p> Improved Home icons</p>
+    <br>
+
+    <h4>What's new in v2.5.2:</h4>
+    <p>- New features:</p>
+    <p> Added advanced operations to Calculator</p>
+    <p> Added Error messages and Turbo Mode detector</p>
+    <p>- Improved features:</p>
+    <p> Improved background</p>
+    <p> Improved Sensor data in BitToys</p>
+    <p> Now you can do as many operations as you want pressing Enter after an operation, without having to close and
+        re-open the app</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed Calculator bug</p>
+    <br>
+
+    <h4>What's new in v2.5.1:</h4>
+    <p>- New features:</p>
+    <p> Added Default theme</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed a bug in the painted backgrounds with light mode</p>
+    <p> Improved Piano quality</p>
+    <br>
+
+    <h4>What's new in v2.5.0:</h4>
+    <p>- New features:</p>
+    <p> Added video app</p>
+    <br>
+
+    <h4>What's new in v2.4.1:</h4>
+    <p>- New features:
+    <p>
+    <p> Added actual date</p>
+    <p> Added welcome screen</p>
+    <p>- Improved features:</p>
+    <p> Merged Settings and Information into a single app</p>
+    <p> Improved Settings</p>
+    <p> Improved Speed Test</p>
+    <p> Improved Shutdown dialog</p>
+    <br>
+
+    <h4>What's new in v2.4.0:</h4>
+    <p>- Bug fixes:</p>
+    <p> Fixed piano app</p>
+    <br>
+
+    <h4>What's new in v2.3.1:</h4>
+    <p>- Improved features:</p>
+    <p> Improved app icons</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed TurboWarp bug</p>
+    <p>- Developmental changes:</p>
+    <p> Added background stats</p>
+    <br>
+
+    <h4>What's new in v2.3.0:</h4>
+    <p>- New features:</p>
+    <p> Added support for LEGO Boost</p>
+    <p> Added Multidirectional control for EV3</p>
+    <p> Added EV3 and WeDo sensor view</p>
+    <p> Added CMD for all users (Press / + Enter. <b>IMPORTANT</b> it could make ScratchOS crash!)</p>
+    <p>- Improved features:</p>
+    <p> Added tab navigation in BitToys</p>
+    <p>- Other Updates:</p>
+    <p> Added folder navigation for sprites (Feature provided by <a href="http://scratchaddons.com"
+            target="_blank">scratchaddons.com</a>)</p>
+    <br>
+
+    <h4>What's new in v2.2.1:</h4>
+    <p>- New features:</p>
+    <p> Added "flip video" feature to the camera</p>
+    <p>- Removed features:</p>
+    <p> Removed Piano app because of bugs in the Scratch environment</p>
+    <br>
+
+    <h4>What's new in v2.2.0:</h4>
+    <p>- New features:</p>
+    <p> Added the Piano app of AxelOS</p>
+    <p>- Improved features:</p>
+    <p> Now you can change the EV3 motor power</p>
+    <p> Improved Notepad buttons</p>
+    <p> Improved load animation for slow computers</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed calculator bugs</p>
+    <p> Fixed a bug that didn't allow to click the buttons in the Paint app</p>
+    <p> Fixed a bug that ruined paintings when the app was clicked</p>
+    <p> Fixed a bug that accidentally shut down ScratchOS when clicking on the right bottom corner in apps</p>
+    <br>
+
+    <h4>What's new in v2.1.1:</h4>
+    <p>- Improved features:</p>
+    <p> Added support for BBC micro:bit in BitToys as alternative device to GDXFOR Controls</p>
+    <br>
+
+    <h4>What's new in v2.1.0:</h4>
+    <p>- New features:</p>
+    <p> Added ScratchOS BitToys, which replaces the GDXFOR Controls app and allows you to control LEGO Mindstorms EV3
+        and WeDo 2.0.</p>
+    <br>
+
+    <h4>What's new in v2.0.3:</h4>
+    <p>- Improved features:</p>
+    <p> Camera video quality improved</p>
+    <p> The camera can now be disabled in settings</p>
+    <p>- Developmental changes:</p>
+    <p> Started implementation of ScratchOS BitToys, that will replace the Force & Acceleration Controls App and contain
+        the features of the ScratchOS IoT Edition</p>
+    <br>
+
+    <h4>What's new in v2.0.2:</h4>
+    <p>- Improved features:</p>
+    <p> Gobo Reminds is Mobile-Friendly now and doesn't require pressing Space anymore</p>
+    <p> Introduced XAI (Cross-App Integration) to prevent hacking and for more stability</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed a volume bug in Gobo</p>
+    <br>
+
+    <h4>What's new in v2.0.1:</h4>
+    <p>- Bug fixes:</p>
+    <p> Minor bug fixes</p>
+    <br>
+
+    <h4>What's new in v2.0.0:</h4>
+    <p>- New Features:</p>
+    <p> Calculator app added</p>
+    <p> Added API</p>
+    <p>- Improved features:</p>
+    <p> Improved design and app icons</p>
+    <p> New Loading animation</p>
+    <p> Buttons change when they are hovered</p>
+    <p> Now you can show and change the Volume from every app by hovering the right bottom corner of the screen</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed a bug that showed the Volume after the Shutdown</p>
+    <p> Fixed a bug that didn't allow to stop Gobo alerts</p>
+    <p> Fixed a bug that didn't allow to adjust the volume in the game</p>
+    <br>
+
+    <h4>What's new in v1.11.1:</h4>
+    <p>- Improved features:</p>
+    <p> Replaced Scratch's speech bubble tooltips at hover with graphic tooltips</p>
+    <p> Improved information variables</p>
+    <br>
+
+    <h4>What's new in v1.11.0:</h4>
+    <p>- New features:</p>
+    <p> Added Dark and Bright mode switch</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed Camera Issues</p>
+    <br>
+
+    <h4>What's new in v1.10.3:</h4>
+    <p>- New features:</p>
+    <p> Recognition of Vernier GoDirect Force and Acceleration controls (Description in OS)</p>
+    <p> You can now drag the App icons</p>
+    <p> Added Volume Control</p>
+    <p> Webcam now shows the microphone volume</p>
+    <p>- Bug fixes:</p>
+    <p> Fixed issues in Gobo</p>
+    <p>- Developmental changes:</p>
+    <p> Improved definitions of Variables and Sprites</p>
+    <br />
+    <p>03/02/2020 - v. 1.2.18: Beta version shared</p>
+    <p>06/02/2020 - v. 1.3.19: Stable version shared</p>
+    <p>10/02/2020 - v. 1.5.20: I added a Feedback app and a speed tester (Thank's @DaMaffles!)</p>
+    <p>24/02/2020 - v. 1.6.21: Paint app added</p>
+    <p>20/03/2020 - v. 1.7.21: Music app added</p>
+    <p>08/05/2020 - v. 1.8.22: After a long time without updates, the webcam function moved from the Cortana app to the
+        home screen and is an independent app. And there's more: ScratchOS doesn't use Microsoft Cortana anymore but has
+        its own AI: Gobo.</p>
+    <p>13/05/2020 - v. 1.9.24: Big update of ScratchOS! A game app, changeable background, a new theme, cool animations,
+        and many bug fixes - get the new ScratchOS!</p>
+
+</body>
+
+</html>
