@@ -142,7 +142,7 @@ footer {
     background: #ffd81700;
 }
 
-.fancy-button {
+button {
     width: fit-content;
     position: relative;
     display: inline-block;
@@ -158,7 +158,7 @@ footer {
     background: linear-gradient(90deg, #5bea75, #72ffd9);
 }
 
-.fancy-button:hover {
+button:hover {
     background: #00e5ac;
     border: 20px #00e5bf;
     background: linear-gradient(90deg, #72ffd9, #5bea75);
