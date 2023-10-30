@@ -56,8 +56,10 @@ header {
 }
 
 .header-links>a>img {
-    width: 50px;
+    padding: 1px;
+    margin: 1px;
     height: 50px;
+    width: 50px
 }
 
 .header-logo>a {
@@ -246,4 +248,16 @@ button:hover {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 500px) {
+    #header-title {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        flex-direction: column;
+    }
 }
