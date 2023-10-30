@@ -260,4 +260,8 @@ button:hover {
     header {
         flex-direction: column;
     }
+
+    .header-links {
+        justify-content: center;
+    }
 }
