@@ -37,94 +37,9 @@ h5 {
     font-size: medium;
 }
 
-header {
-    background-image: url("images/hex.png");
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
-.header-links {
-    width: 100%;
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-}
-
-.header-links>a>img {
-    padding: 1px;
-    margin: 1px;
-    height: 50px;
-    width: 50px
-}
-
-.header-logo>a {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-}
-
-.header-logo>a>img {
-    padding: 1em;
-    margin: 1em;
-}
-
-.header-logo>a>h1 {
-    color: black;
-}
-
-footer {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.new-banner {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.new-banner>img {
-    width: 60%
-}
-
-.new-banner-text {
-    margin: 5px;
-    padding: 10px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.activity {
-    margin: 10px;
-    padding: 10px;
+mark {
     border-radius: 5px;
-    background-color: #00e5bf64;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.welcome-banner {
-    color: #5bea75;
-    text-shadow: 0 0 10px black;
-    background-image: url(images/blurred_banner.webp);
-}
-
-.welcome-banner:hover {
-    background-image: none;
-    color: white;
-    text-shadow: none;
 }
 
 .label {
@@ -166,15 +81,6 @@ button:hover {
     animation: bubble 0.4s ease-out;
 }
 
-.ripples {
-    position: absolute;
-    background: #FFF;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation: rippleanimate 0.4s linear infinite;
-}
-
 @keyframes bubble {
     0% {
         transform: scale(1);
@@ -186,20 +92,6 @@ button:hover {
 
     100% {
         transform: scale(1);
-    }
-}
-
-@keyframes rippleanimate {
-    0% {
-        width: 0px;
-        height: 0%;
-        opacity: 0.4;
-    }
-
-    100% {
-        width: 500px;
-        height: 500px;
-        opacity: 0;
     }
 }
 
@@ -247,20 +139,4 @@ button:hover {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
-
-@media (max-width: 500px) {
-    #header-title {
-        display: none;
-    }
-}
-
-@media (max-width: 450px) {
-    header {
-        flex-direction: column;
-    }
-
-    .header-links {
-        justify-content: center;
-    }
 }
