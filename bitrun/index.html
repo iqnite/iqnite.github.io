@@ -12,49 +12,19 @@
 </head>
 
 <body>
-    <h2><a href="../index.html">IQBit</a></h2>
+    <meta http-equiv="refresh" content="0; url=https://scratch.mit.edu/projects/894848098/" />
+    <!--<h2><a href="../index.html">IQBit</a></h2>
 
-    <!--<img src="../images/bitrun_logo.png" alt="bitrun logo" width="100%" />
+    <img src="../images/bitrun_logo.png" alt="bitrun logo" width="100%" />
     <p>Be aware that it might contain bugs. If you have any suggestions, please submit them on <a
             href="../re/discord.html">our Discord server</a> or <a href="https://scratch.mit.edu/users/philipp2007">on
-            Scratch</a>.</p>-->
+            Scratch</a>.</p>
     <iframe width="100%" height="382" src="https://www.youtube.com/embed/_cRHvoG_YGY" title="bitrun official launch trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p>bitrun is in a closed pre-launch phase. You progress will be kept, don't worry! </p>
     <h1>bitrun is coming in <strong id="countdown"></strong></h1>
-    <!--<button onclick="location.href='play.html'">Play
+    <button onclick="location.href='play.html'">Play
         now</button>
     <p>Build v0.5</p>-->
-
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Nov 19, 2023 15:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-        
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-        
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-          // Display the result in the element with id="countdown"
-          document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-        
-          // If the count down is finished, write some text
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-        </script>
 </body>
 
 </html>
