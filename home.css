@@ -102,6 +102,10 @@ footer {
     #follow-us {
         display: none;
     }
+
+    #calculator-easter-egg {
+        display: none;
+    }
 }
 
 @media (max-width: 450px) {
