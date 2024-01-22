@@ -63,8 +63,8 @@ footer {
     margin: 5px;
     padding: 10px;
     width: 40%;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    flex-direction: initial;
     align-items: left;
 }
 
@@ -119,5 +119,9 @@ footer {
 
     #follow-us {
         display: none;
+    }
+
+    .new-banner {
+        flex-direction: column;
     }
 }
