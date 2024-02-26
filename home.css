@@ -82,6 +82,14 @@ footer {
     flex-grow: 1;
 }
 
+.activity>*>a {
+    color: white;
+}
+
+.activity>*>a:hover {
+    color: black;
+}
+
 .welcome-banner {
     color: #5bea75;
     text-shadow: 0 0 10px black;

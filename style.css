@@ -55,6 +55,7 @@ mark {
 }
 
 button {
+    font-family: monospace;
     width: fit-content;
     position: relative;
     display: inline-block;
