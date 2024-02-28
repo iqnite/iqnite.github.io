@@ -33,7 +33,6 @@ h5 {
     font-size: medium;
 }
 
-
 mark {
     border-radius: 5px;
 }
@@ -54,11 +53,13 @@ mark {
     background: #ffd81700;
 }
 
-button {
+.link-button {
+    color: black;
     font-family: monospace;
     width: fit-content;
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     padding: 7px 18px;
     margin: 10px 0;
     text-decoration: none;
@@ -67,15 +68,14 @@ button {
     overflow: hidden;
     border: 20px #00e503;
     outline: 20px #ffd81700;
-    cursor: pointer;
     background: linear-gradient(90deg, #5bea75, #72ffd9);
 }
 
-button:hover {
-    background: #00e5ac;
+.link-button:hover {
     border: 20px #00e5bf;
     background: linear-gradient(90deg, #72ffd9, #5bea75);
     animation: bubble 0.4s ease-out;
+    background-color: #5bea75;
 }
 
 @keyframes bubble {
