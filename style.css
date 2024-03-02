@@ -1,12 +1,16 @@
 body {
-    margin: 0;
+    margin: 40px;
     padding: 0;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-family: monospace;
-    background: #121212;
+    background: black;
     color: white;
+}
+
+.green {
+    color: #00e503;
 }
 
 a {
@@ -21,16 +25,22 @@ a:hover {
     transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
-h2 {
-    color: #5bea75;
-}
-
-h4 {
-    color: #5bea75;
+h2, h4 {
+    color: #00e503;
 }
 
 h5 {
     font-size: medium;
+}
+
+::selection {
+    background: #00e503;
+    color: black;
+}
+
+::-moz-selection {
+    background: #00e503;
+    color: black;
 }
 
 mark {
@@ -38,7 +48,7 @@ mark {
 }
 
 .label {
-    color: #5bea75;
+    color: #00e503;
     width: fit-content;
     position: relative;
     display: inline-block;
@@ -47,9 +57,9 @@ mark {
     border-radius: 5px;
     background: #00e503;
     overflow: hidden;
-    border: 2px solid #5bea75;
-    outline: 2px #5bea75;
-    border-color: #5bea75;
+    border: 2px solid #00e503;
+    outline: 2px #00e503;
+    border-color: #00e503;
     background: #ffd81700;
 }
 
@@ -67,15 +77,15 @@ mark {
     background: #00e503;
     overflow: hidden;
     border: 20px #00e503;
-    outline: 20px #ffd81700;
-    background: linear-gradient(90deg, #5bea75, #72ffd9);
+    outline: 20px black;
+    background: linear-gradient(90deg, #00e503, #72ffd9);
 }
 
 .link-button:hover {
-    border: 20px #00e5bf;
-    background: linear-gradient(90deg, #72ffd9, #5bea75);
+    border: 20px #00e503;
+    background: linear-gradient(90deg, #72ffd9, #00e503);
     animation: bubble 0.4s ease-out;
-    background-color: #5bea75;
+    background-color: #00e503;
 }
 
 @keyframes bubble {
@@ -102,17 +112,17 @@ mark {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #555;
-    color: #fff;
+    background-color: black;
+    color: #00e503;
+    border: 2px solid #00e503;
+    border-radius: 6px;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
 
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
     top: 125%;
-    right: 10%;
     margin-left: -60px;
 
     /* Fade in tooltip */
