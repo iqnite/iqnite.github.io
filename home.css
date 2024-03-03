@@ -82,14 +82,6 @@ footer {
     flex-grow: 1;
 }
 
-.activity>*>a {
-    color: white;
-}
-
-.activity>*>a:hover {
-    color: black;
-}
-
 .activity>img {
     border-radius: 10px;
 }
