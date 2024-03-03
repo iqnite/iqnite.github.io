@@ -94,7 +94,7 @@ footer {
     border-radius: 10px;
 }
 
-#scratchos-logo {
+.transparent-logo {
     width: 12.5%;
     padding: 12.5%;
 }
@@ -126,7 +126,7 @@ footer {
         display: none;
     }
 
-    .new-banner {
+    .side-by-side {
         flex-direction: column;
     }
 }
