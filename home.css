@@ -125,12 +125,17 @@ footer {
         flex-direction: column;
     }
     
+    .header-links {
+        justify-content: center;
+    }
+
     .side-by-side {
         flex-direction: column;
     }
 
-    .header-links {
-        justify-content: center;
+    .new-banner-text {
+        width: 100%;
+        text-align: center;
     }
 
     #follow-us {
