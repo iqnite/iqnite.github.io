@@ -9,6 +9,7 @@
     <title>ScratchOS</title>
     <link rel="icon" href="/images/scratchos_logo.svg" type="image/svg">
     <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link href="scratchos.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -16,33 +17,29 @@
         window.onbeforeunload = (e) => "Do you want to exit this page?"
     </script>
 
-    <!-- ScratchOS frame -->
-    <iframe
-        src="https://turbowarp.org/365039244/embed?autoplay&settings-button&fullscreen-color=black&addons=remove-curved-stage-border,gamepad,drag-drop,mute-project"
-        allowtransparency="true" width="100%" height="500" frameborder="0" scrolling="no" fullscreen="true"
-        allowfullscreen="true"></iframe>
-
-    <!-- Buttons -->
-    <a class="link-button" href="https://scratch.mit.edu/projects/365039244" target="_blank">↗ Run on
-        scratch.mit.edu</a>
-    <a class="link-button" href="/index.html" target="_blank">🌐 Home</a>
-    <a class="link-button" href="changelog.html" target="_blank">🔀 Changelog</a>
-
-    <hr />
-
-    <!-- Info -->
-    <p>ScratchOS is an online operating system with lots of different features made with Scratch and HTML. You can use
-        it for free and <a href="https://scratch.mit.edu/projects/501351333/" target="_blank">add your own features</a>!
-    <p><b>☁ Cloud data notice:</b> This website uses the <a href="https://turbowarp.org" target="_blank">TurboWarp</a>
-        Cloud Server, a server independent from Scratch. It will connect you with a random username like
-        <code>player1234</code>. To use your Scratch username, <a
-            href="https://scratch.mit.edu/projects/365039244/">open ScratchOS in the Scratch player</a>.</p>
-
-    <!-- Additional info -->
-    <hr />
-
-    <p>Player build: 1.10.1.2403a</p>
-    <p>© 2020 - 2023 by IQBit Technologies Ltd.</p>
+    <div class="side-by-side">
+        <iframe class="scratchos"
+            src="https://turbowarp.org/365039244/embed?autoplay&settings-button&fullscreen-color=black&addons=gamepad,drag-drop,mute-project"
+            allowtransparency="true" width="100%" height="100vh" frameborder="0" scrolling="no" fullscreen="true"
+            allowfullscreen="true"></iframe>
+        <div class="info">
+            <a class="link-button" href="/index.html" target="_blank"><img src="/images/logo.webp" alt="" height="10" /> Home</a>
+            <a class="link-button" href="https://scratch.mit.edu/projects/365039244" target="_blank"><img src="/images/scratch.svg" alt="" height="10" /> Run on
+                scratch.mit.edu</a>
+            <a class="link-button" href="changelog.html" target="_blank">View Changelog</a>
+            <hr />
+            <p>ScratchOS is an online operating system with lots of different features made with Scratch and HTML. You
+                can use it for free and <a href="https://scratch.mit.edu/projects/501351333/" target="_blank">add your
+                    own features</a>!</p>
+            <p><b>☁ Cloud data notice:</b> This website uses the <a href="https://turbowarp.org"
+                    target="_blank">TurboWarp</a> Cloud Server, a server independent from Scratch. It will connect you
+                with a random username like <code>player1234</code>. To use your Scratch username, <a
+                    href="https://scratch.mit.edu/projects/365039244/">open ScratchOS in the Scratch player</a>.</p>
+            <hr />
+            <p>Player build: 1.12.0.2408</p>
+            <p>2020 - 2024 with ❤️ by IQBit</p>
+        </div>
+    </div>
 </body>
 
 </html>
