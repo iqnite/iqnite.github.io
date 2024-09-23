@@ -106,6 +106,20 @@ footer {
     padding: 12.5%;
 }
 
+.color-change {
+    animation: color-change-aniamtion 5s infinite;
+}
+
+@keyframes color-change-aniamtion {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 @media (max-width: 700px) {
     #header-title {
         display: none;
