@@ -89,6 +89,14 @@ mark {
     background-color: #00e503;
 }
 
+input {
+    background-color: black;
+    color: #00e503;
+    border: 2px solid #00e503;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
 @keyframes bubble {
     0% {
         transform: scale(1);
