@@ -1,15 +1,18 @@
 const RELEASES_URL =
   "https://api.github.com/repos/iqnite/yt-dlp-ui/releases/latest";
-const downloadButton = document.getElementById("download-button");
+const retryLink = document.getElementById("retry-link");
 
-downloadButton.addEventListener("click", async () => {
+async function downloadLatestRelease() {
   const response = await fetch(RELEASES_URL);
   if (response.ok) {
     response.json().then((data) => {
       const downloadUrl = data.assets[0].browser_download_url;
       window.location.href = downloadUrl;
+      retryLink.href = downloadUrl;
     });
   } else {
     console.error("Download failed: ", response.statusText);
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", downloadLatestRelease);
