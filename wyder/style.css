@@ -45,13 +45,14 @@ a:hover {
 
 .link-button:hover {
   font-weight: bold;
+  color: #f4f4f4;
   background: linear-gradient(45deg, #4e76f1, #47adfa);
   box-shadow: 0 0 10px rgba(71, 173, 250, 0.5);
 }
 
 .demo-video {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   height: auto;
   border-radius: 10px;
 }
