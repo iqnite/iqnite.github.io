@@ -41,6 +41,7 @@ a:hover {
   font-weight: bold;
   color: #f4f4f4;
   background: linear-gradient(45deg, #47adfa, #4e76f1);
+  cursor: pointer;
 }
 
 .link-button:hover {
