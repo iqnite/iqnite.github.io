@@ -6,9 +6,14 @@ async function downloadLatestRelease() {
   const response = await fetch(RELEASES_URL);
   if (response.ok) {
     response.json().then((data) => {
-      const downloadUrl = data.assets[0].browser_download_url;
-      window.location.href = downloadUrl;
-      retryLink.href = downloadUrl;
+      for (asset of data.assets) {
+        if (asset.name.endsWith(".zip")) {
+          const downloadUrl = asset.browser_download_url;
+          window.location.href = downloadUrl;
+          retryLink.href = downloadUrl;
+          break;
+        }
+      }
     });
   } else {
     console.error("Download failed: ", response.statusText);
