@@ -11,4 +11,13 @@
         ProcessorArchitecture="x64"
         Uri="https://github.com/iqnite/yt-dlp-ui/releases/download/v0.2.16/app.msix" />
 
+    <UpdateSettings>
+        <OnLaunch 
+            HoursBetweenUpdateChecks="12" />
+    </UpdateSettings>
+
+    <UpdateUris>
+        <UpdateUri>https://iqnite.github.io/wyder/download/installer/yt-dlp-ui.appinstaller</UpdateUri>
+    </UpdateUris>
+
 </AppInstaller>
