@@ -13,7 +13,7 @@
 
     <UpdateSettings>
         <OnLaunch 
-            HoursBetweenUpdateChecks="12" />
+            HoursBetweenUpdateChecks="0" />
     </UpdateSettings>
 
     <UpdateUris>
