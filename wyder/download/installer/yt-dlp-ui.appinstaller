@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
+    Version="1.0.0.0"
+    Uri="https://iqnite.github.io/wyder/download/installer/yt-dlp-ui.appinstaller" >
+
+    <MainPackage
+        Name="IQBit.Wyder"
+        Publisher="CN=IQBit"
+        Version="0.2.16.0"
+        ProcessorArchitecture="x64"
+        Uri="https://github.com/iqnite/yt-dlp-ui/releases/download/v0.2.16/app.msix" />
+
+</AppInstaller>
