@@ -7,7 +7,7 @@ async function downloadLatestRelease() {
   if (response.ok) {
     response.json().then((data) => {
       for (asset of data.assets) {
-        if (asset.name.endsWith(".zip")) {
+        if (asset.name.endsWith("installer.zip")) {
           const downloadUrl = asset.browser_download_url;
           window.location.href = downloadUrl;
           retryLink.href = downloadUrl;
