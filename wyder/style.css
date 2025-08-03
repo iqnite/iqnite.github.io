@@ -1,11 +1,18 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ffffff;
   background-color: hsl(227, 39%, 17%);
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  vertical-align: middle;
+}
+
+body > * {
+  max-width: 1000px;
 }
 
 h1 {
@@ -31,6 +38,12 @@ a:hover {
   box-shadow: 0 0 10px rgba(71, 173, 250, 0.5);
 }
 
+.banner {
+  background-color: #3ea8f981;
+  border-radius: 15px;
+  margin: 10px;
+}
+
 ::selection,
 ::-moz-selection {
   background: #47adfa;
@@ -52,7 +65,6 @@ a:hover {
 
 .demo-video {
   width: 100%;
-  max-width: 1000px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }

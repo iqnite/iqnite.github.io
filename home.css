@@ -1,158 +1,158 @@
 header {
-    background-image: url('images/hex.webp');
-    border-radius: 20px;
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background-image: url("images/hex.webp");
+  border-radius: 20px;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .separator {
-    width: 100%;
+  width: 100%;
 }
 
 .header-item {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
 }
 
-.header-item>*>img {
-    height: 50px;
-    width: 50px;
+.header-item > * > img {
+  height: 50px;
+  width: 50px;
 }
 
-.header-item>*>*>img {
-    height: 50px;
-    width: 50px;
+.header-item > * > * > img {
+  height: 50px;
+  width: 50px;
 }
 
 #header-title {
-    font-size: 25px;
-    margin: 12.5px;
+  font-size: 25px;
+  margin: 12.5px;
 }
 
 #follow-us {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 footer {
-    text-align: center;
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .new-banner {
-    background-color: #2b2d31;
-    border-radius: 15px;
-    border-bottom: 5px solid #171717;
-    padding: 10px;
-    margin: 10px;
+  background-color: #2b2d31;
+  border-radius: 15px;
+  border-bottom: 5px solid #171717;
+  padding: 10px;
+  margin: 10px;
 }
 
 .new-banner:hover {
-    background-color: #171717;
-    transition: background-color 0.3s;
+  background-color: #171717;
+  transition: background-color 0.3s;
 }
 
 .side-by-side {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
-.new-banner>img {
-    width: 50%;
-    border-radius: 10px;
+.new-banner > img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .new-banner-text {
-    margin: 15px;
-    width: 50%;
-    display: block;
-    flex-direction: initial;
-    align-items: left;
+  margin: 15px;
+  width: 50%;
+  display: block;
+  flex-direction: initial;
+  align-items: left;
 }
 
 .activity {
-    margin: 10px;
-    padding: 10px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.activity>img {
-    border-radius: 10px;
+.activity > img {
+  border-radius: 10px;
 }
 
 .transparent-logo {
-    width: 12.5%;
-    padding: 12.5%;
+  width: 12.5%;
+  padding: 12.5%;
 }
 
 .color-change {
-    animation: color-change-aniamtion 5s infinite;
+  animation: color-change-aniamtion 5s infinite;
 }
 
 @keyframes color-change-aniamtion {
-    0% {
-        filter: hue-rotate(0deg);
-    }
+  0% {
+    filter: hue-rotate(0deg);
+  }
 
-    50% {
-        filter: hue-rotate(360deg);
-    }
+  50% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 @media (max-width: 700px) {
-    #header-title {
-        display: none;
-    }
+  #header-title {
+    display: none;
+  }
 
-    #follow-us {
-        display: none;
-    }
+  #follow-us {
+    display: none;
+  }
 
-    #calculator-easter-egg {
-        display: none;
-    }
+  #calculator-easter-egg {
+    display: none;
+  }
 }
 
 @media (max-width: 595px) {
-    header {
-        flex-direction: column;
-    }
-    
-    .header-links {
-        justify-content: center;
-    }
+  header {
+    flex-direction: column;
+  }
 
-    .side-by-side {
-        flex-direction: column;
-    }
+  .header-links {
+    justify-content: center;
+  }
 
-    .new-banner-text {
-        width: 100%;
-        text-align: center;
-    }
+  .side-by-side {
+    flex-direction: column;
+  }
 
-    #follow-us {
-        display: none;
-    }
+  .new-banner-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  #follow-us {
+    display: none;
+  }
 }
