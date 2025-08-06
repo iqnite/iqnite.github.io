@@ -7,9 +7,9 @@
     <MainPackage
         Name="7678ed52-5a73-465a-a4b1-eeb8b067fca1"
         Publisher="CN=IQBit"
-        Version="0.2.16.0"
+        Version="0.2.17.0"
         ProcessorArchitecture="x64"
-        Uri="https://github.com/iqnite/yt-dlp-ui/releases/download/v0.2.16/app.msix" />
+        Uri="https://github.com/iqnite/yt-dlp-ui/releases/download/v0.2.17/app.msix" />
 
     <UpdateSettings>
         <OnLaunch 
