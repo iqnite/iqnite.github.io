@@ -20,30 +20,61 @@ function populateCardSelection(cards) {
   cardSelectionDiv.innerHTML = "";
   for (const cardID in cards) {
     const card = cards[cardID];
+
     const cardDetails = document.createElement("details");
     cardDetails.className = "card";
+
     const cardSummary = document.createElement("summary");
     cardSummary.className = "card-summary";
     cardSummary.innerHTML = `${card.emoji} ${card.title}`;
+
     const cardAmount = document.createElement("input");
     cardAmount.className = "card-amount";
     cardAmount.type = "number";
     cardAmount.value = "0";
-    cardAmount.min = "0";
+    cardAmount.min = "-100";
     cardAmount.max = "100";
-    cardAmount.id = `card-amount-${cardID}`;
     cardAmount.addEventListener("input", generateRecipeCode);
-    cardSummary.appendChild(cardAmount);
+
     const cardDetailsContent = document.createElement("div");
     cardDetailsContent.className = "card-details-content";
+
     const cardDetailsDescription = document.createElement("p");
     cardDetailsDescription.innerHTML = card.description;
+
+    const cardAutoAmountSetting = document.createElement("input");
+    cardAutoAmountSetting.className = "card-auto-amount-setting";
+    cardAutoAmountSetting.type = "checkbox";
+    cardAutoAmountSetting.name = "auto-amount";
+    cardAutoAmountSetting.addEventListener("change", generateRecipeCode);
+    const cardAutoAmountSettingLabel = document.createElement("label");
+    cardAutoAmountSettingLabel.innerHTML =
+      "Set the card number relative to the amount of players";
+
+    const cardPreserveSetting = document.createElement("input");
+    cardPreserveSetting.className = "card-preserve-setting";
+    cardPreserveSetting.type = "checkbox";
+    cardPreserveSetting.name = "preserve";
+    cardPreserveSetting.addEventListener("change", generateRecipeCode);
+    const cardPreserveSettingLabel = document.createElement("label");
+    cardPreserveSettingLabel.innerHTML =
+      "Preserve this card when the deck gets trimmed";
+
+    cardSummary.appendChild(cardAmount);
     cardDetailsContent.appendChild(cardDetailsDescription);
+    cardDetailsContent.appendChild(cardAutoAmountSetting);
+    cardDetailsContent.appendChild(cardAutoAmountSettingLabel);
+    cardDetailsContent.appendChild(lineBreak());
+    cardDetailsContent.appendChild(cardPreserveSetting);
+    cardDetailsContent.appendChild(cardPreserveSettingLabel);
     cardDetails.appendChild(cardSummary);
     cardDetails.appendChild(cardDetailsContent);
     cardSelectionDiv.appendChild(cardDetails);
+
     cardSelections[cardID] = {
       amountInput: cardAmount,
+      autoAmountSetting: cardAutoAmountSetting,
+      preserveSetting: cardPreserveSetting,
     };
   }
 }
@@ -54,9 +85,15 @@ function generateRecipeCode() {
   for (const cardID in cardSelections) {
     const cardInfo = cardSelections[cardID];
     const cardAmount = cardInfo.amountInput;
-    cards[cardID] = {
-      amount: parseInt(cardAmount.value),
-    };
+    const card = (cards[cardID] = {});
+    const cardAmountValue = parseInt(cardAmount.value);
+    if (cardInfo.autoAmountSetting.checked) {
+      card.auto_amount = cardAmountValue;
+    } else {
+      card.amount = cardAmountValue;
+    }
+    const preserveSettingChecked = cardInfo.preserveSetting.checked;
+    if (preserveSettingChecked) card.preserve = preserveSettingChecked;
   }
   recipe.cards = cards;
   recipeCode.textContent = JSON.stringify(recipe, null, 2);
@@ -76,7 +113,11 @@ function copyRecipeCode() {
     },
     (err) => {
       console.error("Failed to copy recipe code: ", err);
-      alert("Failed to copy recipe code.");
+      alert("Failed to copy recipe code. Please try again.");
     }
   );
+}
+
+function lineBreak() {
+  return document.createElement("br");
 }
