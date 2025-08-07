@@ -89,7 +89,7 @@ function populateCardSelection(cards) {
     cardExpandBeyondSetting.addEventListener("change", generateRecipeCode);
     const cardExpandBeyondSettingLabel = document.createElement("label");
     cardExpandBeyondSettingLabel.innerHTML =
-      "Mutliply this card if the amount of players is equal or greater than: ";
+      "Multiply this card if the amount of players is equal or greater than: ";
 
     const cardExpandBeyondInput = document.createElement("input");
     cardExpandBeyondInput.className = "card-expand-beyond-input";
