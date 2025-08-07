@@ -1,2 +1,77 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0; url=https://github.com/iqnite/eggsplode/wiki/Recipes" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eggsplode Recipe Maker</title>
+    <meta
+      name="description"
+      content="Play items, betray your friends, and be the last one to survive in this action-packed Discord game! Inspired by the card game Exploding Kittens, Eggsplode mixes explosions and... eggs."
+    />
+    <meta property="og:title" content="Eggsplode" />
+    <meta
+      property="og:description"
+      content="Play items, betray your friends, and be the last one to survive in this action-packed Discord game! Inspired by the card game Exploding Kittens, Eggsplode mixes explosions and... eggs."
+    />
+    <meta property="og:type" content="homepage" />
+    <meta property="og:url" content="https://iqnite.github.io/eggsplode/recipemaker" />
+    <meta
+      property="og:image"
+      content="https://iqnite.github.io/images/eggsplode_logo.png"
+    />
+    <meta
+      property="og:banner"
+      content="https://iqnite.github.io/images/eggsplode_banner_3.png"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../images/eggsplode_logo.png" />
+  </head>
+  <body>
+    <h1>
+      <a href="/index.html">IQBit</a> >>
+      <a href="../index.html"
+        ><img
+          src="../images/eggsplode_logo.png"
+          alt="Bot icon"
+          height="40"
+        />Eggsplode</a
+      > >>
+      <a class="bigger" href="index.html">
+        Recipe Maker
+      </a>
+    </h1>
+    <p>Use this site to create recipes for the Eggsplode game!</p>
+
+    <h2>1. Choose the cards</h2>
+    <div id="card-selection-div">
+
+    </div>
+    
+    <h2>2. Copy the code</h2>
+    <code id="recipe-code"></code>
+    <button type="button" id="copy-code-button">Copy</button>
+
+    <h2>3. Enter the code in Eggsplode</h2>
+    <ol>
+      <li>In Discord, send the <code>/start</code> command if you haven't already.</li>
+      <li>Under <i>Recipe</i>, click on <i>Edit</i>.</li>
+      <li>
+        Replace the code in the <i>Recipe JSON</i> text field with the code you just copied.
+        You can do this quickly by pressing <kbd>Ctrl</kbd>+<kbd>A</kbd>, then <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+      </li>
+      <li>Click <i>Submit</i> to update the recipe.</li>
+    </ol>
+
+    <h2>4. Done! Now you can start the game.</h2>
+
+    <footer>
+      <a href="install.html">Install</a> |
+      <a href="github.html">GitHub</a> |
+      <a href="discord.html">Discord server</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
