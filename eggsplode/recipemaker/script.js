@@ -42,6 +42,29 @@ function populateCardSelection(cards) {
     const cardDetailsDescription = document.createElement("p");
     cardDetailsDescription.innerHTML = card.description;
 
+    const cardHandOutSetting = document.createElement("input");
+    cardHandOutSetting.className = "card-hand-out-setting";
+    cardHandOutSetting.type = "checkbox";
+    cardHandOutSetting.name = "hand-out";
+    cardHandOutSetting.addEventListener("change", () => {
+      cardSelections[cardID].handOutInput.style.display = cardHandOutSetting.checked
+        ? "inline-block"
+        : "none";
+      generateRecipeCode();
+    });
+    const cardHandOutSettingLabel = document.createElement("label");
+    cardHandOutSettingLabel.innerHTML =
+      "Hand out a fixed amount of this card to each player ";
+
+    const cardHandOutInput = document.createElement("input");
+    cardHandOutInput.className = "card-hand-out-input";
+    cardHandOutInput.type = "number";
+    cardHandOutInput.value = "0";
+    cardHandOutInput.min = "0";
+    cardHandOutInput.max = "100";
+    cardHandOutInput.style.display = "none";
+    cardHandOutInput.addEventListener("input", generateRecipeCode);
+
     const cardAutoAmountSetting = document.createElement("input");
     cardAutoAmountSetting.className = "card-auto-amount-setting";
     cardAutoAmountSetting.type = "checkbox";
@@ -67,6 +90,10 @@ function populateCardSelection(cards) {
     cardDetailsContent.appendChild(lineBreak());
     cardDetailsContent.appendChild(cardPreserveSetting);
     cardDetailsContent.appendChild(cardPreserveSettingLabel);
+    cardDetailsContent.appendChild(lineBreak());
+    cardDetailsContent.appendChild(cardHandOutSetting);
+    cardDetailsContent.appendChild(cardHandOutSettingLabel);
+    cardDetailsContent.appendChild(cardHandOutInput);
     cardDetails.appendChild(cardSummary);
     cardDetails.appendChild(cardDetailsContent);
     cardSelectionDiv.appendChild(cardDetails);
@@ -75,6 +102,8 @@ function populateCardSelection(cards) {
       amountInput: cardAmount,
       autoAmountSetting: cardAutoAmountSetting,
       preserveSetting: cardPreserveSetting,
+      handOutSetting: cardHandOutSetting,
+      handOutInput: cardHandOutInput,
     };
   }
 }
@@ -91,6 +120,9 @@ function generateRecipeCode() {
       card.auto_amount = cardAmountValue;
     } else {
       card.amount = cardAmountValue;
+    }
+    if (cardInfo.handOutSetting.checked) {
+      card.hand_out = parseInt(cardInfo.handOutInput.value);
     }
     const preserveSettingChecked = cardInfo.preserveSetting.checked;
     if (preserveSettingChecked) card.preserve = preserveSettingChecked;
