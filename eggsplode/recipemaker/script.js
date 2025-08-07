@@ -4,6 +4,7 @@ const CARDS_JSON_URL =
 const cardSelectionDiv = document.getElementById("card-selection-div");
 const recipeCode = document.getElementById("recipe-code");
 const copyCodeButton = document.getElementById("copy-code-button");
+const loadingText = document.getElementById("loading-text");
 
 var cardSelections = {};
 
@@ -12,6 +13,7 @@ fetch(CARDS_JSON_URL)
   .then((data) => {
     populateCardSelection(data);
     generateRecipeCode();
+    loadingText.style.display = "none";
   });
 
 copyCodeButton.addEventListener("click", copyRecipeCode);
@@ -164,7 +166,9 @@ function generateRecipeCode() {
         card.amount = cardAmountValue;
       }
     }
-    cards[cardID] = card;
+    if (card !== 0) {
+        cards[cardID] = card;
+    }
   }
   recipe.cards = cards;
   recipeCode.textContent = JSON.stringify(recipe, null, 2);
