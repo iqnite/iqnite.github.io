@@ -6,7 +6,7 @@ body {
 
 button {
   padding: 10px;
-  margin: 10px; 
+  margin: 10px;
   border-radius: 10px;
   border: none;
   color: #ced2ee;
@@ -20,11 +20,11 @@ button.primary {
 }
 
 button.success {
-    background-color: #00863A;
+  background-color: #00863a;
 }
 
 summary {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 pre,
@@ -37,4 +37,9 @@ pre,
 
 .card-amount {
   float: right;
+}
+
+.card-amount.error {
+  color: #ff0000;
+  border-color: #ff0000;
 }

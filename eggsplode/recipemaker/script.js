@@ -133,8 +133,6 @@ function generateRecipeCode() {
   for (const cardID in cardSelections) {
     let card = {};
     const cardInfo = cardSelections[cardID];
-    const cardAmount = cardInfo.amountInput;
-    const cardAmountValue = parseInt(cardAmount.value);
     if (cardInfo.handOutSetting.checked) {
       card.hand_out = parseInt(cardInfo.handOutInput.value);
     }
@@ -149,9 +147,17 @@ function generateRecipeCode() {
     } else {
       card.expand_beyond = null;
     }
+    const cardAmount = cardInfo.amountInput;
+    const cardAmountValue = parseInt(cardAmount.value);
     if (cardInfo.autoAmountSetting.checked) {
       card.auto_amount = cardAmountValue;
+      cardInfo.amountInput.classList.remove("error");
     } else {
+      if (cardAmountValue < 0) {
+        cardInfo.amountInput.classList.add("error");
+      } else {
+        cardInfo.amountInput.classList.remove("error");
+      }
       if (JSON.stringify(card) === JSON.stringify({})) {
         card = cardAmountValue;
       } else {
