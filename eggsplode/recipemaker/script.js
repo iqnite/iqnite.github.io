@@ -7,7 +7,7 @@ const recipeCode = document.getElementById("recipe-code");
 const copyCodeButton = document.getElementById("copy-code-button");
 const loadingText = document.getElementById("loading-text");
 
-var cardSelections = {};
+const cardSelections = {};
 
 fetch(CARDS_JSON_URL)
   .then((response) => response.json())
@@ -135,7 +135,7 @@ function generateRecipeCode() {
   const recipe = {};
 
   const cardsPerPlayer = parseInt(cardsPerPlayerInput.value);
-  if (!(isNaN(cardsPerPlayer) || cardsPerPlayer == 8)) {
+  if (!(isNaN(cardsPerPlayer) || cardsPerPlayer === 8)) {
     recipe.cards_per_player = cardsPerPlayer;
   }
 
