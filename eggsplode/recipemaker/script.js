@@ -1,6 +1,7 @@
 const CARDS_JSON_URL =
   "https://raw.githubusercontent.com/iqnite/eggsplode/refs/heads/main/resources/cards.json";
 
+const cardsPerPlayerInput = document.getElementById("cards-per-player-input");
 const cardSelectionDiv = document.getElementById("card-selection-div");
 const recipeCode = document.getElementById("recipe-code");
 const copyCodeButton = document.getElementById("copy-code-button");
@@ -16,6 +17,7 @@ fetch(CARDS_JSON_URL)
     loadingText.style.display = "none";
   });
 
+cardsPerPlayerInput.addEventListener("input", generateRecipeCode);
 copyCodeButton.addEventListener("click", copyRecipeCode);
 
 function populateCardSelection(cards) {
@@ -131,6 +133,12 @@ function populateCardSelection(cards) {
 
 function generateRecipeCode() {
   const recipe = {};
+
+  const cardsPerPlayer = parseInt(cardsPerPlayerInput.value);
+  if (!(isNaN(cardsPerPlayer) || cardsPerPlayer == 8)) {
+    recipe.cards_per_player = cardsPerPlayer;
+  }
+
   const cards = {};
   for (const cardID in cardSelections) {
     let card = {};
@@ -155,7 +163,7 @@ function generateRecipeCode() {
       card.auto_amount = cardAmountValue;
       cardInfo.amountInput.classList.remove("error");
     } else {
-      if (cardAmountValue < 0) {
+      if (cardAmountValue < 0 || isNaN(cardAmountValue)) {
         cardInfo.amountInput.classList.add("error");
       } else {
         cardInfo.amountInput.classList.remove("error");
@@ -167,7 +175,7 @@ function generateRecipeCode() {
       }
     }
     if (card !== 0) {
-        cards[cardID] = card;
+      cards[cardID] = card;
     }
   }
   recipe.cards = cards;

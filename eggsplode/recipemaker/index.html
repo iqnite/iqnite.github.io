@@ -45,7 +45,10 @@
     </h1>
     <p>Use this site to create recipes for the Eggsplode game!</p>
 
-    <h2>1. Choose the cards</h2>
+    <h2>1. Choose your preferences</h2>
+    <label for="cards-per-player-input">Cards to hand out to each player:</label>
+    <input id="cards-per-player-input" name="cards-per-player-input" class="cards-per-player-input" type="number" min="0" max="100" value="8" />
+    <h3>Cards to include in the deck</h3>
     <p id="loading-text">LOADING CARDS...</p>
     <div id="card-selection-div"></div>
 
