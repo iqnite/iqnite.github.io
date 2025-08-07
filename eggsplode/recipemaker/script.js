@@ -46,15 +46,10 @@ function populateCardSelection(cards) {
     cardHandOutSetting.className = "card-hand-out-setting";
     cardHandOutSetting.type = "checkbox";
     cardHandOutSetting.name = "hand-out";
-    cardHandOutSetting.addEventListener("change", () => {
-      cardSelections[cardID].handOutInput.style.display = cardHandOutSetting.checked
-        ? "inline-block"
-        : "none";
-      generateRecipeCode();
-    });
+    cardHandOutSetting.addEventListener("change", generateRecipeCode);
     const cardHandOutSettingLabel = document.createElement("label");
     cardHandOutSettingLabel.innerHTML =
-      "Hand out a fixed amount of this card to each player ";
+      "Hand out a fixed amount of this card to each player: ";
 
     const cardHandOutInput = document.createElement("input");
     cardHandOutInput.className = "card-hand-out-input";
@@ -62,7 +57,6 @@ function populateCardSelection(cards) {
     cardHandOutInput.value = "0";
     cardHandOutInput.min = "0";
     cardHandOutInput.max = "100";
-    cardHandOutInput.style.display = "none";
     cardHandOutInput.addEventListener("input", generateRecipeCode);
 
     const cardAutoAmountSetting = document.createElement("input");
@@ -83,17 +77,40 @@ function populateCardSelection(cards) {
     cardPreserveSettingLabel.innerHTML =
       "Preserve this card when the deck gets trimmed";
 
+    const cardExpandBeyondSetting = document.createElement("input");
+    cardExpandBeyondSetting.className = "card-expand-beyond-setting";
+    cardExpandBeyondSetting.type = "checkbox";
+    cardExpandBeyondSetting.name = "expand-beyond";
+    cardExpandBeyondSetting.checked = true;
+    cardExpandBeyondSetting.addEventListener("change", generateRecipeCode);
+    const cardExpandBeyondSettingLabel = document.createElement("label");
+    cardExpandBeyondSettingLabel.innerHTML =
+      "Mutliply this card if the amount of players is equal or greater than: ";
+
+    const cardExpandBeyondInput = document.createElement("input");
+    cardExpandBeyondInput.className = "card-expand-beyond-input";
+    cardExpandBeyondInput.type = "number";
+    cardExpandBeyondInput.value = "5";
+    cardExpandBeyondInput.min = "0";
+    cardExpandBeyondInput.max = "100";
+    cardExpandBeyondInput.addEventListener("input", generateRecipeCode);
+
     cardSummary.appendChild(cardAmount);
     cardDetailsContent.appendChild(cardDetailsDescription);
+    cardDetailsContent.appendChild(lineBreak());
+    cardDetailsContent.appendChild(cardHandOutSetting);
+    cardDetailsContent.appendChild(cardHandOutSettingLabel);
+    cardDetailsContent.appendChild(cardHandOutInput);
+    cardDetailsContent.appendChild(lineBreak());
     cardDetailsContent.appendChild(cardAutoAmountSetting);
     cardDetailsContent.appendChild(cardAutoAmountSettingLabel);
     cardDetailsContent.appendChild(lineBreak());
     cardDetailsContent.appendChild(cardPreserveSetting);
     cardDetailsContent.appendChild(cardPreserveSettingLabel);
     cardDetailsContent.appendChild(lineBreak());
-    cardDetailsContent.appendChild(cardHandOutSetting);
-    cardDetailsContent.appendChild(cardHandOutSettingLabel);
-    cardDetailsContent.appendChild(cardHandOutInput);
+    cardDetailsContent.appendChild(cardExpandBeyondSetting);
+    cardDetailsContent.appendChild(cardExpandBeyondSettingLabel);
+    cardDetailsContent.appendChild(cardExpandBeyondInput);
     cardDetails.appendChild(cardSummary);
     cardDetails.appendChild(cardDetailsContent);
     cardSelectionDiv.appendChild(cardDetails);
@@ -104,6 +121,8 @@ function populateCardSelection(cards) {
       preserveSetting: cardPreserveSetting,
       handOutSetting: cardHandOutSetting,
       handOutInput: cardHandOutInput,
+      expandBeyondSetting: cardExpandBeyondSetting,
+      expandBeyondInput: cardExpandBeyondInput,
     };
   }
 }
@@ -112,20 +131,34 @@ function generateRecipeCode() {
   const recipe = {};
   const cards = {};
   for (const cardID in cardSelections) {
+    let card = {};
     const cardInfo = cardSelections[cardID];
     const cardAmount = cardInfo.amountInput;
-    const card = (cards[cardID] = {});
     const cardAmountValue = parseInt(cardAmount.value);
-    if (cardInfo.autoAmountSetting.checked) {
-      card.auto_amount = cardAmountValue;
-    } else {
-      card.amount = cardAmountValue;
-    }
     if (cardInfo.handOutSetting.checked) {
       card.hand_out = parseInt(cardInfo.handOutInput.value);
     }
     const preserveSettingChecked = cardInfo.preserveSetting.checked;
     if (preserveSettingChecked) card.preserve = preserveSettingChecked;
+    const expandBeyondSettingChecked = cardInfo.expandBeyondSetting.checked;
+    if (expandBeyondSettingChecked) {
+      const expandBeyondValue = parseInt(cardInfo.expandBeyondInput.value);
+      if (expandBeyondValue !== 5) {
+        card.expand_beyond = expandBeyondValue;
+      }
+    } else {
+      card.expand_beyond = null;
+    }
+    if (cardInfo.autoAmountSetting.checked) {
+      card.auto_amount = cardAmountValue;
+    } else {
+      if (JSON.stringify(card) === JSON.stringify({})) {
+        card = cardAmountValue;
+      } else {
+        card.amount = cardAmountValue;
+      }
+    }
+    cards[cardID] = card;
   }
   recipe.cards = cards;
   recipeCode.textContent = JSON.stringify(recipe, null, 2);
