@@ -1,0 +1,40 @@
+body {
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+button {
+  padding: 10px;
+  margin: 10px; 
+  border-radius: 10px;
+  border: none;
+  color: #ced2ee;
+  background-color: #232426;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #5865f2;
+  font-weight: bold;
+}
+
+button.success {
+    background-color: #00863A;
+}
+
+summary {
+    cursor: pointer;
+}
+
+pre,
+.card {
+  background-color: #131416;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.card-amount {
+  float: right;
+}
