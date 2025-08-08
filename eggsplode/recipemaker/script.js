@@ -70,7 +70,7 @@ function populateCardSelection(cards) {
     cardAutoAmountSetting.addEventListener("change", generateRecipeCode);
     const cardAutoAmountSettingLabel = document.createElement("label");
     cardAutoAmountSettingLabel.innerHTML =
-      "Set the card number relative to the amount of players";
+      "Set the card amount relative to the amount of players";
 
     const cardPreserveSetting = document.createElement("input");
     cardPreserveSetting.className = "card-preserve-setting";
