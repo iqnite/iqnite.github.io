@@ -135,6 +135,10 @@ footer {
 }
 
 @media (max-width: 595px) {
+  body {
+    padding: 5px;
+  }
+
   header {
     flex-direction: column;
   }
@@ -150,6 +154,11 @@ footer {
   .new-banner-text {
     width: 100%;
     text-align: center;
+  }
+
+  .new-banner > img {
+    width: 100%;
+    border-radius: 10px;
   }
 
   #follow-us {
