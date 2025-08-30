@@ -54,6 +54,7 @@ footer {
 .new-banner:hover {
   background-color: #171717;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 .side-by-side {
