@@ -27,11 +27,11 @@ img {
 
 a {
   color: #00e503;
+  border-radius: 3px;
 }
 
 a:hover {
   color: black;
-  border-radius: 3px;
   background-color: #00e503;
   box-shadow: 0 0 10px #00e503;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
@@ -92,8 +92,8 @@ mark {
 
 .link-button:hover {
   border: 20px #00e503;
-  background: linear-gradient(90deg, #72ffd9, #00e503);
-  animation: bubble 0.4s ease-out;
+  background-size: 200% 200%;
+  transition: background 0.1s linear;
   background-color: #00e503;
 }
 
@@ -110,12 +110,8 @@ input {
     transform: scale(1);
   }
 
-  50% {
-    transform: scale(1.2);
-  }
-
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 
