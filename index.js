@@ -38,4 +38,5 @@ function requestTick() {
 }
 
 window.addEventListener("scroll", requestTick, { passive: true });
+window.addEventListener("resize", requestTick, { passive: true });
 window.addEventListener("load", applyScrollBlur);
