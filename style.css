@@ -28,6 +28,8 @@ img {
 a {
   color: #00e503;
   border-radius: 3px;
+  text-decoration: dashed underline;
+  text-underline-offset: 2px;
 }
 
 a:hover {

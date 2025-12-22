@@ -12,6 +12,11 @@ header {
   width: 100%;
 }
 
+.tooltip {
+  margin: 2px;
+  padding: 2px;
+}
+
 .header-item {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -121,7 +126,7 @@ footer {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   #header-title {
     display: none;
   }
@@ -142,6 +147,10 @@ footer {
 
   header {
     flex-direction: column;
+  }
+
+  #header-title {
+    display: block;
   }
 
   .header-links {
