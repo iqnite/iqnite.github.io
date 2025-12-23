@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="800mm"
-   height="800mm"
-   viewBox="0 0 800 800"
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58333"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    sodipodi:docname="logo_transparent.svg"
-   inkscape:export-filename="logo2026.webp"
+   inkscape:export-filename="logo_transparent.webp"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,15 +27,31 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.22627417"
-     inkscape:cx="1449.5689"
-     inkscape:cy="1513.6505"
+     inkscape:zoom="0.32"
+     inkscape:cx="-31.25"
+     inkscape:cy="782.8125"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1" />
+     inkscape:current-layer="svg1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="132.29166"
+       spacingy="132.29166"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
   <defs
      id="defs1">
     <linearGradient
@@ -493,11 +509,11 @@
        only_selected="false"
        hide_knots="false" />
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter47"
        x="-0.23894589"
-       y="-0.24337084"
+       y="-0.24337085"
        width="1.5046902"
        height="1.5140364">
       <feFlood
@@ -602,18 +618,18 @@
        inkscape:collect="always"
        xlink:href="#linearGradient66"
        id="linearGradient67"
-       x1="9.7419684"
+       x1="9.7419682"
        y1="392.29965"
-       x2="742.08438"
+       x2="742.08435"
        y2="392.29965"
        gradientUnits="userSpaceOnUse" />
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter10"
-       x="-0.085812661"
-       y="-0.087219026"
-       width="1.1798746"
+       x="-0.085812658"
+       y="-0.08721903"
+       width="1.1798747"
        height="1.1828225">
       <feFlood
          result="flood"
@@ -646,7 +662,7 @@
          id="feComposite10" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter24"
        x="-0.18797059"
@@ -718,7 +734,7 @@
          in2="comp1" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter2"
        x="-0.093985294"
@@ -760,5 +776,5 @@
      id="path5"
      style="display:inline;opacity:1;mix-blend-mode:normal;fill:url(#linearGradient67);fill-opacity:1;stroke:none;stroke-width:5.00556;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0;filter:url(#filter2)"
      d="M 36.564548,34.533463 A 24.320675,24.320675 0 0 0 15.502382,71.014728 l 37.294307,64.595542 a 72.96268,72.96268 0 0 0 63.187641,36.48126 h 74.58862 a 72.962681,72.962681 0 0 0 63.18764,-36.48126 L 291.05547,71.014728 A 24.320679,24.320679 0 0 0 269.99273,34.533463 Z M 332.11929,67.911271 a 24.320675,24.320675 0 0 0 -19.36603,12.100898 l -37.29373,64.596111 a 72.96268,72.96268 0 0 0 0,72.96253 l 37.2943,64.59612 a 72.962681,72.962681 0 0 0 63.18707,36.48126 h 74.58919 A 24.320679,24.320679 0 0 0 471.59226,282.1675 L 354.87816,80.012169 A 24.320675,24.320675 0 0 0 332.11929,67.911271 Z M 640.67295,193.66185 a 72.96268,72.96268 0 0 0 -63.18707,36.48126 l -37.29431,64.59612 a 72.962681,72.962681 0 0 0 -5.7e-4,72.96253 l 37.29431,64.59611 a 24.32068,24.32068 0 0 0 42.1249,0 L 736.3243,230.14254 a 24.320675,24.320675 0 0 0 -21.06216,-36.48069 z m -404.8969,27.09223 a 24.32068,24.32068 0 0 0 -19.36603,12.1009 L 99.695922,435.01031 A 24.320675,24.320675 0 0 0 120.75809,471.491 h 74.58919 a 72.96268,72.96268 0 0 0 63.18707,-36.48126 l 37.2943,-64.59612 a 72.962681,72.962681 0 0 0 0,-72.96253 l -37.29373,-64.59611 a 24.32068,24.32068 0 0 0 -22.75887,-12.1009 z m 144.94148,119.46443 a 72.962681,72.962681 0 0 0 -63.18765,36.48126 l -37.2943,64.59554 a 24.320679,24.320679 0 0 0 21.06216,36.48127 H 534.7265 a 24.320675,24.320675 0 0 0 21.06217,-36.48127 L 518.49379,376.69977 A 72.96268,72.96268 0 0 0 455.30672,340.21851 Z M 120.76038,499.34747 A 24.320679,24.320679 0 0 0 99.698219,535.82873 L 216.41231,737.98349 a 24.320675,24.320675 0 0 0 42.12491,0 l 37.2943,-64.59611 a 72.96268,72.96268 0 0 0 -5.7e-4,-72.96253 l -37.29431,-64.59554 a 72.962681,72.962681 0 0 0 -63.18707,-36.48127 z"
-     transform="matrix(0.9,0,0,0.9,58.978113,44.195129)" />
+     transform="matrix(0.22471716,0,0,0.22471716,58.396745,58.484556)" />
 </svg>
