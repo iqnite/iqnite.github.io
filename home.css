@@ -1,24 +1,55 @@
 header {
-  background-image: url("images/hex.webp");
+  border: 1px solid rgb(44, 44, 44);
   border-radius: 20px;
   background-size: cover;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(22, 22, 22, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  position: sticky;
+  border-radius: 0;
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-right: -40px;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+header.scrolled .header-item {
+  padding: 10px;
+  margin: 5px;
+}
+
+header.scrolled .header-item > * > img {
+  height: 35px;
+  width: 35px;
+}
+
+header.scrolled .header-item > * > * > img {
+  height: 35px;
+  width: 35px;
+}
+
+header.scrolled #header-title {
+  font-size: 18px;
+  margin: 8px;
 }
 
 .separator {
   width: 100%;
 }
 
-.tooltip {
-  margin: 2px;
-  padding: 2px;
-}
-
 .header-item {
-  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
@@ -80,6 +111,11 @@ footer {
 
 .reverse-row {
   flex-direction: row-reverse;
+}
+
+.row-item {
+  margin: 5px;
+  padding: 5px;
 }
 
 .new-banner > img {
@@ -144,17 +180,17 @@ footer {
   }
 }
 
-@media (max-width: 595px) {
+@media (max-width: 700px) {
   body {
     padding: 5px;
   }
 
-  header {
-    flex-direction: column;
-  }
-
-  #header-title {
-    display: block;
+  header.scrolled {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    margin-right: -5px;
+    transition: all 0.3s ease;
+    overflow: scroll;
   }
 
   .header-links {
@@ -163,6 +199,12 @@ footer {
 
   .side-by-side {
     flex-direction: column;
+  }
+
+  .scrolled > * > .side-by-side,
+  .scrolled > .side-by-side {
+    flex-direction: row;
+    transition: all 0.3s ease;
   }
 
   .new-banner-text {
