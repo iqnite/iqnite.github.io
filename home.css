@@ -78,6 +78,10 @@ footer {
   text-align: left;
 }
 
+.reverse-row {
+  flex-direction: row-reverse;
+}
+
 .new-banner > img {
   width: 50%;
   border-radius: 10px;
@@ -169,6 +173,10 @@ footer {
   .new-banner > img {
     width: 100%;
     border-radius: 10px;
+  }
+
+  .reverse-row {
+    flex-direction: column;
   }
 
   #follow-us {
