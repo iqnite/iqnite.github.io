@@ -17,7 +17,7 @@ header {
 header.scrolled {
   position: sticky;
   border-radius: 0;
-  width: calc(100% + 80px);
+  width: calc(100% + 78px);
   margin-left: -40px;
   margin-right: -40px;
   left: 0;
