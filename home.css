@@ -55,12 +55,7 @@ header.scrolled #header-title {
   padding: 20px;
 }
 
-.header-item > * > img {
-  height: 50px;
-  width: 50px;
-}
-
-.header-item > * > * > img {
+.header-img {
   height: 50px;
   width: 50px;
 }
