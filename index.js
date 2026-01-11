@@ -13,7 +13,6 @@ async function fetchLastUpdate() {
     lastSiteUpdate.textContent = `Last updated on ${lastCommitDate.toLocaleDateString(undefined, options)}`;
   } catch (error) {
     console.error("Failed to fetch last update:", error);
-    lastSiteUpdate.textContent = "";
   }
 }
 
@@ -26,7 +25,7 @@ function handleHeaderScroll() {
   }
 }
 
-fetchLastUpdate();
 window.addEventListener("scroll", handleHeaderScroll, { passive: true });
 window.addEventListener("resize", handleHeaderScroll);
 window.addEventListener("load", handleHeaderScroll);
+fetchLastUpdate();
