@@ -27,5 +27,7 @@ function handleHeaderScroll() {
 
 window.addEventListener("scroll", handleHeaderScroll, { passive: true });
 window.addEventListener("resize", handleHeaderScroll);
+window.addEventListener("orientationchange", handleHeaderScroll);
 window.addEventListener("load", handleHeaderScroll);
+handleHeaderScroll();
 fetchLastUpdate();
