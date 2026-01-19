@@ -37,6 +37,7 @@ function populateCardSelection(cards) {
     const cardSummary = document.createElement("summary");
     cardSummary.className = "card-summary";
     cardSummary.innerHTML = `${card.emoji} ${card.title}`;
+    cardSummary.title = card.description;
 
     const cardAmount = document.createElement("input");
     cardAmount.className = "card-amount";
