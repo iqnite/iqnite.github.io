@@ -24,7 +24,13 @@ function populateCardSelection(cards) {
   cardSelectionDiv.innerHTML = "";
   for (const cardID in cards) {
     const card = cards[cardID];
-
+    const cardDefaults = {
+      exclude: false,
+      hideHandOut: false,
+      fixedHandOut: false,
+      defaultHandOut: 0,
+      ...(card.meta?.recipemaker || {}),
+    };
     const cardDetails = document.createElement("details");
     cardDetails.className = "card";
 
@@ -50,6 +56,7 @@ function populateCardSelection(cards) {
     cardHandOutSetting.className = "card-hand-out-setting";
     cardHandOutSetting.type = "checkbox";
     cardHandOutSetting.name = "hand-out";
+    cardHandOutSetting.checked = cardDefaults.fixedHandOut;
     cardHandOutSetting.addEventListener("change", generateRecipeCode);
     const cardHandOutSettingLabel = document.createElement("label");
     cardHandOutSettingLabel.innerHTML =
@@ -58,7 +65,7 @@ function populateCardSelection(cards) {
     const cardHandOutInput = document.createElement("input");
     cardHandOutInput.className = "card-hand-out-input";
     cardHandOutInput.type = "number";
-    cardHandOutInput.value = "0";
+    cardHandOutInput.value = cardDefaults.defaultHandOut.toString();
     cardHandOutInput.min = "0";
     cardHandOutInput.max = "100";
     cardHandOutInput.addEventListener("input", generateRecipeCode);
@@ -99,25 +106,29 @@ function populateCardSelection(cards) {
     cardExpandBeyondInput.max = "100";
     cardExpandBeyondInput.addEventListener("input", generateRecipeCode);
 
-    cardSummary.appendChild(cardAmount);
-    cardDetailsContent.appendChild(cardDetailsDescription);
-    cardDetailsContent.appendChild(lineBreak());
-    cardDetailsContent.appendChild(cardHandOutSetting);
-    cardDetailsContent.appendChild(cardHandOutSettingLabel);
-    cardDetailsContent.appendChild(cardHandOutInput);
-    cardDetailsContent.appendChild(lineBreak());
-    cardDetailsContent.appendChild(cardAutoAmountSetting);
-    cardDetailsContent.appendChild(cardAutoAmountSettingLabel);
-    cardDetailsContent.appendChild(lineBreak());
-    cardDetailsContent.appendChild(cardPreserveSetting);
-    cardDetailsContent.appendChild(cardPreserveSettingLabel);
-    cardDetailsContent.appendChild(lineBreak());
-    cardDetailsContent.appendChild(cardExpandBeyondSetting);
-    cardDetailsContent.appendChild(cardExpandBeyondSettingLabel);
-    cardDetailsContent.appendChild(cardExpandBeyondInput);
-    cardDetails.appendChild(cardSummary);
-    cardDetails.appendChild(cardDetailsContent);
-    cardSelectionDiv.appendChild(cardDetails);
+    if (!cardDefaults.exclude) {
+      cardSummary.appendChild(cardAmount);
+      cardDetailsContent.appendChild(cardDetailsDescription);
+      cardDetailsContent.appendChild(lineBreak());
+      if (!cardDefaults.hideHandOut) {
+        cardDetailsContent.appendChild(cardHandOutSetting);
+        cardDetailsContent.appendChild(cardHandOutSettingLabel);
+        cardDetailsContent.appendChild(cardHandOutInput);
+        cardDetailsContent.appendChild(lineBreak());
+      }
+      cardDetailsContent.appendChild(cardAutoAmountSetting);
+      cardDetailsContent.appendChild(cardAutoAmountSettingLabel);
+      cardDetailsContent.appendChild(lineBreak());
+      cardDetailsContent.appendChild(cardPreserveSetting);
+      cardDetailsContent.appendChild(cardPreserveSettingLabel);
+      cardDetailsContent.appendChild(lineBreak());
+      cardDetailsContent.appendChild(cardExpandBeyondSetting);
+      cardDetailsContent.appendChild(cardExpandBeyondSettingLabel);
+      cardDetailsContent.appendChild(cardExpandBeyondInput);
+      cardDetails.appendChild(cardSummary);
+      cardDetails.appendChild(cardDetailsContent);
+      cardSelectionDiv.appendChild(cardDetails);
+    }
 
     cardSelections[cardID] = {
       amountInput: cardAmount,
@@ -197,7 +208,7 @@ function copyRecipeCode() {
     (err) => {
       console.error("Failed to copy recipe code: ", err);
       alert("Failed to copy recipe code. Please try again.");
-    }
+    },
   );
 }
 
