@@ -96,6 +96,25 @@ footer {
   text-align: left;
 }
 
+.vertical-banner {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.side-by-side > .vertical-banner {
+  align-self: stretch;
+}
+
+.side-by-side > .vertical-banner > img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: clamp(160px, 18vw, 220px);
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -209,6 +228,13 @@ footer {
 
   .new-banner > img {
     width: 100%;
+    border-radius: 10px;
+  }
+
+  .side-by-side > .vertical-banner > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
   }
 
