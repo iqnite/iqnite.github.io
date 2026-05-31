@@ -180,23 +180,13 @@ footer {
   }
 }
 
-@media (max-width: 780px) {
-  #header-title {
-    display: none;
-  }
-
-  #follow-us {
-    display: none;
-  }
-
-  #calculator-easter-egg {
-    display: none;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   body {
     padding: 5px;
+  }
+
+  #header-title {
+    display: none;
   }
 
   header.scrolled {
