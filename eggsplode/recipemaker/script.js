@@ -1,6 +1,7 @@
 const CARDS_JSON_URL =
   "https://raw.githubusercontent.com/iqnite/eggsplode/refs/heads/main/resources/cards.json";
 
+const cardSearch = document.getElementById("card-search");
 const cardsPerPlayerInput = document.getElementById("cards-per-player-input");
 const cardSelectionDiv = document.getElementById("card-selection-div");
 const recipeCode = document.getElementById("recipe-code");
@@ -9,21 +10,32 @@ const loadingText = document.getElementById("loading-text");
 
 const cardSelections = {};
 
+var cards;
+
 fetch(CARDS_JSON_URL)
   .then((response) => response.json())
   .then((data) => {
-    populateCardSelection(data);
+    cards = data;
+    populateCardSelection(cards);
     generateRecipeCode();
     loadingText.style.display = "none";
   });
 
+cardSearch.addEventListener("input", (e) =>
+  populateCardSelection(cards, cardSearch.value),
+);
 cardsPerPlayerInput.addEventListener("input", generateRecipeCode);
 copyCodeButton.addEventListener("click", copyRecipeCode);
 
-function populateCardSelection(cards) {
+function populateCardSelection(cards, filter = "") {
   cardSelectionDiv.innerHTML = "";
   for (const cardID in cards) {
     const card = cards[cardID];
+    if (
+      filter !== "" &&
+      !card.title.toUpperCase().includes(filter.toUpperCase())
+    )
+      continue;
     const cardDefaults = {
       exclude: false,
       hideHandOut: false,
