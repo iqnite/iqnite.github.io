@@ -31,6 +31,7 @@ a {
   border-radius: 3px;
   text-decoration: dashed underline;
   text-underline-offset: 2px;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 a:hover {
