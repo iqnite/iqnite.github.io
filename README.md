@@ -1,6 +1,6 @@
 # phorb.dev
 
-This repository contains the source code for [phorb.dev](https://iqnite.github.io), my personal website.
+This repository contains the source code for [phorb.dev](https://iqnite.github.io), my personal website, written in pure HTML, CSS, and JavaScript. It also contains the web pages of my other projects, such as the Eggsplode Recipe Maker.
 
 To run the website locally, simply clone the repository and open `index.html` in your web browser. No additional setup is required.
 
