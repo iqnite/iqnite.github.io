@@ -153,6 +153,10 @@ function populateCardSelection(cards, filter = "") {
       expandBeyondInput: cardExpandBeyondInput,
     };
   }
+  if (cardSelectionDiv.innerHTML === "") {
+    cardSelectionDiv.innerHTML = "<p><i>No cards match your search :/</i></p>"
+  }
+
 }
 
 function generateRecipeCode() {
