@@ -60,6 +60,13 @@ header.scrolled #header-title {
   width: 50px;
 }
 
+.header-main-link:hover {
+  .header-img {
+    filter: brightness(0);
+    transition: filter 0.3s;
+  }
+}
+
 #header-title {
   font-size: 25px;
   margin: 12.5px;
