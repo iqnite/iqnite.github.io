@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://iqnite.github.io/images/",
+  "baseUrl": "https://raw.githubusercontent.com/iqnite/iqnite.github.io/main/images/",
   "svgNames": [
     "github.svg",
     "itchio.svg",
