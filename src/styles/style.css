@@ -31,14 +31,20 @@ a {
   border-radius: 3px;
   text-decoration: dashed underline;
   text-underline-offset: 2px;
-  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 a:hover {
   color: black;
   background-color: #00e503;
   box-shadow: 0 0 10px #00e503;
-  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s;
   text-decoration: none;
 }
 
@@ -129,4 +135,10 @@ input {
   100% {
     transform: scale(1.2);
   }
+}
+
+.button-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
