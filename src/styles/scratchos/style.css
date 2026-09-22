@@ -9,6 +9,7 @@
 .scratchos {
   width: 200%;
   height: calc(100vh - 80px);
+  border: none;
 }
 
 .info {
