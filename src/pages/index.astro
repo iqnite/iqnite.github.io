@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import "../styles/home.css";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <!doctype html>
@@ -89,179 +90,137 @@ import "../styles/home.css";
       </p>
       <h2>Games</h2>
       <div class="side-by-side">
-        <div class="new-banner vertical-banner">
-          <img src="images/eggsplode_banner.webp" alt="Eggsplode banner" />
-          <div>
-            <h3>
-              <a href="eggsplode">Eggsplode</a>
-            </h3>
-            <p>
+        <ProjectCard
+          image="images/eggsplode_banner.webp"
+          titleLink="eggsplode"
+          title="Eggsplode"
+          description="
               The Discord adaptation of the Exploding Kittens card game! During
               your turn, you draw a card. If it's an Eggsplode card, you lose!
               Use all the other cards to attack, steal, defuse, survive, and
-              win!
-            </p>{" "}
-            <a class="link-button" href="eggsplode/install.html">Install</a>{
-              " "
-            }
-            <a href="eggsplode/github.html"
-              ><img src="images/github.svg" title="GitHub" width="25" /></a
-            >
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/space_chaos_logo.webp" alt="Space Chaos logo" />
-          <div>
-            <h3>
-              <a href="https://scratch.mit.edu/projects/510859688/"
-                >Space Chaos</a
-              >
-            </h3>
-            <p>
-              Fly through space, eating rainbow tacos and dodging asteroids. It
-              also has UFOs and a Nyan cat!
-            </p>
-            <a
-              class="link-button"
-              href="https://scratch.mit.edu/projects/510859688/">Play</a
-            >{" "}
-            <a href="https://youtu.be/Kzafrox2QRk"
-              ><img
-                src="images/youtube.svg"
-                title="YouTube trailer"
-                height="25"
-              /></a
-            >
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/bitrun_logo_shift.webp" alt="bitrun logo" />
-          <div>
-            <h3><a href="bitrun">bitrun</a></h3>
-            <p>
-              Fight enemies, jump over electric floors, dodge blades… oh, and by
-              the way, save the world.
-            </p>
-            <a class="link-button" href="/bitrun">Play</a>{" "}
-            <a href="https://scratch.mit.edu/projects/894848098/"
-              ><img src="images/scratch.svg" title="Scratch" height="25" /></a
-            >{" "}
-            <a href="https://youtu.be/_cRHvoG_YGY"
-              ><img
-                src="images/youtube.svg"
-                title="YouTube trailer"
-                height="25"
-              /></a
-            >
-          </div>
-        </div>
+              win!"
+          buttonLink="eggsplode/install.html"
+          buttonText="Install"
+        >
+          <a href="eggsplode/github.html"
+            ><img src="images/github.svg" title="GitHub" width="25" /></a
+          >
+        </ProjectCard>
+        <ProjectCard
+          image="images/space_chaos_logo.webp"
+          titleLink="https://scratch.mit.edu/projects/510859688/"
+          title="Space Chaos"
+          description="Fly through space, eating rainbow tacos and dodging asteroids. It
+              also has UFOs and a Nyan cat!"
+          buttonLink="https://scratch.mit.edu/projects/510859688/"
+          buttonText="Play"
+        >
+          <a href="https://youtu.be/Kzafrox2QRk"
+            ><img
+              src="images/youtube.svg"
+              title="YouTube trailer"
+              height="25"
+            /></a
+          >
+        </ProjectCard>
+        <ProjectCard
+          image="images/bitrun_logo_shift.webp"
+          titleLink="bitrun"
+          title="bitrun"
+          description="Fight enemies, jump over electric floors, dodge blades… oh, and by
+        the way, save the world."
+          buttonLink="bitrun"
+          buttonText="Play"
+        >
+          <a href="https://scratch.mit.edu/projects/894848098/"
+            ><img src="images/scratch.svg" title="Scratch" height="25" /></a
+          >{" "}
+          <a href="https://youtu.be/_cRHvoG_YGY"
+            ><img
+              src="images/youtube.svg"
+              title="YouTube trailer"
+              height="25"
+            /></a
+          >
+        </ProjectCard>
       </div>
       <h2>Utilities</h2>
       <div class="side-by-side">
-        <div class="new-banner vertical-banner">
-          <img src="images/wyder-screenshot.webp" alt="Wyder logo" />
-          <div>
-            <h3>
-              <a href="wyder">Wyder</a>
-            </h3>
-            <p>
-              An intuitive and powerful video downloader for Windows with no ads
-              and no scams that allows you to download videos from various
-              platforms, including YouTube, Spotify, TikTok, and many more, for
-              free.
-            </p>
-            <a
-              class="link-button"
-              href="https://apps.microsoft.com/detail/9N5XN62FZ62R">Download</a
-            >{" "}
-            <a href="https://github.com/iqnite/yt-dlp-ui"
-              ><img src="images/github.svg" title="GitHub" width="25" /></a
-            >
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/pyspec.webp" alt="pySPEC logo" />
-          <div>
-            <h3><a href="https://www.astrolens.net/downloads">pySPEC</a></h3>
-            <p>
-              A platform-independent app for spectroscopy with the TCD1304.
-              Developed in collaboration with{" "}
-              <a href="https://www.astrolens.net/">AstroLens</a>.
-            </p>
-            <a class="link-button" href="https://www.astrolens.net/downloads"
-              >Download</a
-            >{" "}
-            <a href="https://github.com/iqnite/pyccd-spectrometer"
-              ><img src="images/github.svg" title="GitHub" height="25" /></a
-            >
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/msix-no-cert-banner.webp" alt="MSIX-NO-CERT icon" />
-          <div>
-            <h3>
-              <a href="https://github.com/iqnite/msix-no-cert"
-                >Self-signed MSIX</a
-              >
-            </h3>
-            <p>
-              Allows creating installers for MSIX files with a self-signed
-              certificate.
-            </p>
-            <a
-              class="link-button"
-              href="https://www.powershellgallery.com/packages/msix-no-cert"
-              >Install</a
-            >
-          </div>
-        </div>
+        <ProjectCard
+          image="images/wyder-screenshot.webp"
+          titleLink="wyder"
+          title="Wyder"
+          description="
+          An intuitive and powerful video downloader for Windows with no ads
+          and no scams that allows you to download videos from various
+          platforms, including YouTube, Spotify, TikTok, and many more, for
+          free."
+          buttonLink="https://apps.microsoft.com/detail/9N5XN62FZ62R"
+          buttonText="Download"
+        >
+          <a href="https://github.com/iqnite/yt-dlp-ui"
+            ><img src="images/github.svg" title="GitHub" width="25" /></a
+          >
+        </ProjectCard>
+        <ProjectCard
+          image="images/pyspec.webp"
+          titleLink="https://www.astrolens.net/downloads"
+          title="pySPEC"
+          description="
+            A platform-independent app for spectroscopy with the TCD1304.
+            Developed in collaboration with
+            <a href='https://www.astrolens.net/'>AstroLens</a>."
+          buttonLink="https://www.astrolens.net/downloads"
+          buttonText="Download"
+        >
+          <a href="https://github.com/iqnite/pyccd-spectrometer"
+            ><img src="images/github.svg" title="GitHub" height="25" /></a
+          >
+        </ProjectCard>
+        <ProjectCard
+          image="images/msix-no-cert-banner.webp"
+          titleLink="https://github.com/iqnite/msix-no-cert"
+          title="Self-signed MSIX"
+          description="
+          Allows creating installers for MSIX files with a self-signed
+          certificate."
+          buttonLink="https://www.powershellgallery.com/packages/msix-no-cert"
+          buttonText="Install"
+        />
       </div>
       <h2>Fun Stuff</h2>
       <div class="side-by-side">
-        <div class="new-banner vertical-banner">
-          <img src="images/spamojifactorial.webp" alt="Spamoji screenshot" />
-          <div>
-            <h3>
-              <a href="https://github.com/iqnite/spamoji">Spamoji 🍝</a>
-            </h3>
-            <p>
-              A programming language that only uses emojis as syntax and
-              encourages writing spaghetti code.
-            </p>
-            <a class="link-button" href="https://github.com/iqnite/spamoji"
-              >Learn more</a
-            >
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/scratchos-x-cover.webp" alt="ScratchOS logo" />
-          <div>
-            <h3><a href="scratchos">ScratchOS X</a></h3>
-            <p>An operating system made entirely in Scratch.</p>
-            <a
-              class="link-button"
-              href="https://scratch.mit.edu/projects/365039244">Try it</a
-            >{" "}
-            <a href="scratchos/changelog/">Change log</a>
-          </div>
-        </div>
-        <div class="new-banner vertical-banner">
-          <img src="images/yeetme_logo.webp" alt="Yeetme logo" />
-          <div>
-            <h3>
-              <a href="https://github.com/iqnite/MotionSound">Yeetme!</a>
-            </h3>
-            <p>
-              Makes wacky sounds when you move your phone in specific ways. It
-              has multiple modes, such as Gun, Bomb, Speed, and more.
-            </p>
-            <a
-              class="link-button"
-              href="https://github.com/iqnite/MotionSound/releases/latest"
-              >Download</a
-            >
-          </div>
-        </div>
+        <ProjectCard
+          image="images/spamojifactorial.webp"
+          titleLink="https://github.com/iqnite/spamoji"
+          title="Spamoji 🍝"
+          description="
+            A programming language that only uses emojis as syntax and
+            encourages writing spaghetti code."
+          buttonLink="https://github.com/iqnite/spamoji"
+          buttonText="Learn more"
+        />
+        <ProjectCard
+          image="images/scratchos-x-cover.webp"
+          titleLink="scratchos"
+          title="ScratchOS X"
+          description="
+            An operating system made entirely in Scratch."
+          buttonLink="https://scratch.mit.edu/projects/365039244"
+          buttonText="Try it"
+        >
+          <a href="scratchos/changelog/">Change log</a>
+        </ProjectCard>
+        <ProjectCard
+          image="images/yeetme_logo.webp"
+          titleLink="https://github.com/iqnite/MotionSound"
+          title="Yeetme!"
+          description="
+            Makes wacky sounds when you move your phone in specific ways. It has
+            multiple modes, such as Gun, Bomb, Speed, and more."
+          buttonLink="https://github.com/iqnite/MotionSound/releases/latest"
+          buttonText="Download"
+        />
       </div>
       <p>
         <img

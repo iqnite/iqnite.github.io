@@ -1,0 +1,19 @@
+---
+import "../styles/style.css";
+import "../styles/home.css";
+
+const { title, description, image, titleLink, buttonText, buttonLink } =
+  Astro.props;
+---
+
+<div class="new-banner vertical-banner">
+  <img src={image} alt={title} />
+  <div>
+    <h3>
+      <a href={titleLink}>{title}</a>
+    </h3>
+    <p set:html={description} />{" "}
+    <a class="link-button" href={buttonLink}>{buttonText}</a>{" "}
+    <slot />
+  </div>
+</div>
