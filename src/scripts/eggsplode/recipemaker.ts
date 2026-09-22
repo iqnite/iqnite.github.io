@@ -1,16 +1,22 @@
 const CARDS_JSON_URL =
   "https://raw.githubusercontent.com/iqnite/eggsplode/refs/heads/main/resources/cards.json";
 
-const cardSearch = document.getElementById("card-search");
-const cardsPerPlayerInput = document.getElementById("cards-per-player-input");
-const cardSelectionDiv = document.getElementById("card-selection-div");
-const recipeCode = document.getElementById("recipe-code");
-const copyCodeButton = document.getElementById("copy-code-button");
-const loadingText = document.getElementById("loading-text");
+const cardSearch = document.getElementById("card-search") as HTMLInputElement;
+const cardsPerPlayerInput = document.getElementById(
+  "cards-per-player-input",
+) as HTMLInputElement;
+const cardSelectionDiv = document.getElementById(
+  "card-selection-div",
+) as HTMLInputElement;
+const recipeCode = document.getElementById("recipe-code") as HTMLInputElement;
+const copyCodeButton = document.getElementById(
+  "copy-code-button",
+) as HTMLInputElement;
+const loadingText = document.getElementById("loading-text") as HTMLInputElement;
 
-const cardSelections = {};
+const cardSelections: Record<string, CardSelection> = {};
 
-var cards;
+var cards: Record<string, Card>;
 
 fetch(CARDS_JSON_URL)
   .then((response) => response.json())
@@ -27,7 +33,7 @@ cardSearch.addEventListener("input", (e) =>
 cardsPerPlayerInput.addEventListener("input", generateRecipeCode);
 copyCodeButton.addEventListener("click", copyRecipeCode);
 
-function populateCardSelection(cards, filter = "") {
+function populateCardSelection(cards: Record<string, Card>, filter = "") {
   cardSelectionDiv.innerHTML = "";
   for (const cardID in cards) {
     const card = cards[cardID];
@@ -154,22 +160,23 @@ function populateCardSelection(cards, filter = "") {
     };
   }
   if (cardSelectionDiv.innerHTML === "") {
-    cardSelectionDiv.innerHTML = "<p><i>No cards match your search :/</i></p>"
+    cardSelectionDiv.innerHTML = "<p><i>No cards match your search :/</i></p>";
   }
-
 }
 
 function generateRecipeCode() {
-  const recipe = {};
+  const recipe: Recipe = {
+    cards: {},
+  };
 
   const cardsPerPlayer = parseInt(cardsPerPlayerInput.value);
   if (!(isNaN(cardsPerPlayer) || cardsPerPlayer === 8)) {
     recipe.cards_per_player = cardsPerPlayer;
   }
 
-  const cards = {};
+  const cards: Record<string, CardRecipe | number> = {};
   for (const cardID in cardSelections) {
-    let card = {};
+    let card: CardRecipe | number = {};
     const cardInfo = cardSelections[cardID];
     if (cardInfo.handOutSetting.checked) {
       card.hand_out = parseInt(cardInfo.handOutInput.value);
@@ -231,4 +238,41 @@ function copyRecipeCode() {
 
 function lineBreak() {
   return document.createElement("br");
+}
+
+interface Card {
+  title: string;
+  description: string;
+  emoji: string;
+  meta?: {
+    recipemaker?: {
+      exclude?: boolean;
+      hideHandOut?: boolean;
+      fixedHandOut?: boolean;
+      defaultHandOut?: number;
+    };
+  };
+}
+
+interface CardSelection {
+  amountInput: HTMLInputElement;
+  autoAmountSetting: HTMLInputElement;
+  preserveSetting: HTMLInputElement;
+  handOutSetting: HTMLInputElement;
+  handOutInput: HTMLInputElement;
+  expandBeyondSetting: HTMLInputElement;
+  expandBeyondInput: HTMLInputElement;
+}
+
+interface Recipe {
+  cards_per_player?: number;
+  cards: Record<string, CardRecipe | number>;
+}
+
+interface CardRecipe {
+  amount?: number;
+  auto_amount?: number;
+  hand_out?: number;
+  preserve?: boolean;
+  expand_beyond?: number | null;
 }

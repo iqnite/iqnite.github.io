@@ -1,3 +1,8 @@
+---
+import "../../../styles/style.css";
+import "../../../styles/eggsplode.css";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,13 +31,11 @@
       property="og:banner"
       content="https://iqnite.github.io/images/eggsplode_banner_3.png"
     />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/images/eggsplode_logo.png" />
   </head>
   <body>
     <h1>
-      <a href="/">phorb.dev</a> >>
+      <a href="/">phorb.dev</a> &gt;&gt;
       <a href="../"
         ><img
           src="/images/eggsplode_logo.png"
@@ -40,7 +43,7 @@
           height="40"
         />Eggsplode</a
       >
-      >>
+      &gt;&gt;
       <a class="bigger" href="."> Recipe Maker </a>
     </h1>
     <p>
@@ -51,8 +54,7 @@
     </p>
 
     <h2>1. Choose your preferences</h2>
-    <label for="cards-per-player-input"
-      >Cards to hand out to each player:</label
+    <label for="cards-per-player-input">Cards to hand out to each player:</label
     >
     <input
       id="cards-per-player-input"
@@ -78,7 +80,9 @@
     <div id="card-selection-div"></div>
     <noscript
       ><p>
-        <strong class="green">Please enable JavaScript to show available cards!</strong>
+        <strong class="green"
+          >Please enable JavaScript to show available cards!</strong
+        >
       </p></noscript
     >
 
@@ -96,8 +100,8 @@
       </li>
       <li>Under <i>Recipe</i>, click on <i>Edit</i>.</li>
       <li>
-        Replace the code in the <i>Recipe JSON</i> text field with the code you
-        just copied. You can do this quickly by pressing
+        Replace the code in the <i>Recipe JSON</i> text field with the code you just
+        copied. You can do this quickly by pressing
         <kbd>Ctrl</kbd>+<kbd>A</kbd>, then <kbd>Ctrl</kbd>+<kbd>V</kbd>.
       </li>
       <li>Click <i>Submit</i> to update the recipe.</li>
@@ -106,13 +110,13 @@
     <h2>4. Done! Now you can start the game.</h2>
 
     <footer>
-      <a href="../install.html">Install</a> |
-      <a href="../github.html">GitHub</a> |
-      <a href="../discord.html">Discord server</a> |
-      <a href="../terms.html">Terms of Service</a> |
-      <a href="../privacy.html">Privacy Policy</a>
+      <a href="install.html">Install</a> |
+      <a href="github.html">GitHub</a> |
+      <a href="discord.html">Discord server</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../../../scripts/eggsplode/recipemaker.js"></script>
   </body>
 </html>
