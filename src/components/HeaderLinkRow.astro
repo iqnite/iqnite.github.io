@@ -5,6 +5,8 @@ import HeaderLink from "./HeaderLink.astro";
 import githubLogo from "../assets/github.svg";
 import itchioLogo from "../assets/itchio.svg";
 import scratchLogo from "../assets/scratch.svg";
+
+const { loading } = Astro.props;
 ---
 
 <div class="row">
@@ -12,15 +14,18 @@ import scratchLogo from "../assets/scratch.svg";
     link="https://github.com/iqnite"
     title="GitHub"
     image={githubLogo}
+    loading={loading}
   />{" "}
   <HeaderLink
     link="https://slashlab.itch.io"
     title="itch.io"
     image={itchioLogo}
+    loading={loading}
   />{" "}
   <HeaderLink
     link="https://scratch.mit.edu/users/philipp2007"
     title="Scratch"
     image={scratchLogo}
+    loading={loading}
   />
 </div>

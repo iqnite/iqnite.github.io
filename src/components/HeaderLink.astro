@@ -3,9 +3,9 @@ import "../styles/style.css";
 import "../styles/home.css";
 import { Image } from "astro:assets";
 
-const { image, link, title } = Astro.props;
+const { image, link, title, loading } = Astro.props;
 ---
 
 <a class="row-item" href={link} title={title}>
-  <Image class="header-img" src={image} alt={title} /></a
+  <Image class="header-img" src={image} alt={title} loading={loading} /></a
 >
