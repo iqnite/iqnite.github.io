@@ -1,5 +1,7 @@
 ---
 import "../styles/style.css";
+import { Image } from "astro:assets";
+import errorImage from "../assets/404.png";
 ---
 
 <!doctype html>
@@ -18,7 +20,7 @@ import "../styles/style.css";
       continue browsing.
     </p>
     <p>
-      <img src="/images/404.png" alt="404" />
+      <Image src={errorImage} alt="404" loading="eager" />
     </p>
   </body>
 </html>
