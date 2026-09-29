@@ -2,11 +2,18 @@
 import "../styles/style.css";
 import "../styles/home.css";
 
-const { title, description, image, titleLink, buttonText, buttonLink } =
-  Astro.props;
+const {
+  title,
+  description,
+  image,
+  titleLink,
+  buttonText,
+  buttonLink,
+  category,
+} = Astro.props;
 ---
 
-<div class="project-card vertical-banner">
+<div class="project-card vertical-banner" data-category={category}>
   <img src={image} alt={title} class="project-img" />
   <div>
     <h3>

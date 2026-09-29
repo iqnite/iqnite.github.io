@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import "../styles/home.css";
 import MainHeader from "../components/MainHeader.astro";
+import CategoryBar from "../components/CategoryBar.astro";
 import ProjectLayout from "../components/ProjectLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
@@ -60,6 +61,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         >
       </p>
 
+      <CategoryBar />
       <ProjectLayout>
         <ProjectCard
           image="images/eggsplode_banner.webp"
@@ -72,6 +74,7 @@ import ProjectCard from "../components/ProjectCard.astro";
               win!"
           buttonLink="eggsplode/install.html"
           buttonText="Install"
+          category="Games"
         >
           <a href="eggsplode/github.html"
             ><img src="images/github.svg" title="GitHub" width="25" /></a
@@ -85,6 +88,7 @@ import ProjectCard from "../components/ProjectCard.astro";
               also has UFOs and a Nyan cat!"
           buttonLink="https://scratch.mit.edu/projects/510859688/"
           buttonText="Play"
+          category="Games"
         >
           <a href="https://youtu.be/Kzafrox2QRk"
             ><img
@@ -102,6 +106,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         the way, save the world."
           buttonLink="bitrun"
           buttonText="Play"
+          category="Games"
         >
           <a href="https://scratch.mit.edu/projects/894848098/"
             ><img src="images/scratch.svg" title="Scratch" height="25" /></a
@@ -125,6 +130,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           free."
           buttonLink="https://apps.microsoft.com/detail/9N5XN62FZ62R"
           buttonText="Download"
+          category="Apps"
         >
           <a href="https://github.com/iqnite/yt-dlp-ui"
             ><img src="images/github.svg" title="GitHub" width="25" /></a
@@ -140,6 +146,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             <a href='https://www.astrolens.net/'>AstroLens</a>."
           buttonLink="https://www.astrolens.net/downloads"
           buttonText="Download"
+          category="Apps"
         >
           <a href="https://github.com/iqnite/pyccd-spectrometer"
             ><img src="images/github.svg" title="GitHub" height="25" /></a
@@ -154,6 +161,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           certificate."
           buttonLink="https://www.powershellgallery.com/packages/msix-no-cert"
           buttonText="Install"
+          category="Apps"
         />
         <ProjectCard
           image="images/spamojifactorial.webp"
@@ -164,6 +172,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             encourages writing spaghetti code."
           buttonLink="https://github.com/iqnite/spamoji"
           buttonText="Learn more"
+          category="Demos"
         />
         <ProjectCard
           image="images/scratchos-x-cover.webp"
@@ -173,6 +182,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             An operating system made entirely in Scratch."
           buttonLink="https://scratch.mit.edu/projects/365039244"
           buttonText="Try it"
+          category="Demos"
         >
           <a href="scratchos/changelog/">Change log</a>
         </ProjectCard>
@@ -185,6 +195,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             multiple modes, such as Gun, Bomb, Speed, and more."
           buttonLink="https://github.com/iqnite/MotionSound/releases/latest"
           buttonText="Download"
+          category="Games"
         />
       </ProjectLayout>
 
@@ -226,6 +237,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       <br />
       <br />
     </footer>
+    <script src="../scripts/categories.ts"></script>
     <script src="../scripts/headerScroll.ts"></script>
     <script src="../scripts/lastUpdate.ts"></script>
   </body>

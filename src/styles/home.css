@@ -125,8 +125,19 @@ footer {
 }
 
 .project-layout {
+  position: relative;
   column-width: 400px;
   column-gap: 20px;
+}
+
+.project-layout.masonry-ready {
+  column-width: auto;
+  column-count: 1;
+}
+
+.project-layout.masonry-ready .project-card {
+  position: absolute;
+  margin-bottom: 0;
 }
 
 .row {
@@ -168,6 +179,34 @@ footer {
 
 .activity > img {
   border-radius: 10px;
+}
+
+.category-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #2b2d31;
+  border: none;
+  cursor: pointer;
+}
+
+.category-button.active {
+  background-color: #00e503;
+  color: #2b2d31;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
 
 .transparent-logo {
@@ -223,6 +262,10 @@ footer {
   .project-card-text {
     width: 100%;
     text-align: center;
+  }
+
+  .project-layout {
+    grid-template-columns: 1fr;
   }
 
   .project-card > img {
