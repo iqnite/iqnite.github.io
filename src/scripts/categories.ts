@@ -1,6 +1,8 @@
 const categoryBar = document.querySelector(".category-bar");
 const projectCards = document.querySelectorAll(".project-card");
-const projectLayout = document.querySelector(".project-layout") as HTMLElement | null;
+const projectLayout = document.querySelector(
+  ".project-layout",
+) as HTMLElement | null;
 
 const activeCategories: string[] = [];
 
@@ -75,7 +77,7 @@ function layoutProjects() {
   projectLayout.style.height = `${Math.max(0, ...columnHeights) - (visibleCards.length ? gap : 0)}px`;
 }
 
-createCategoryButtons(["Games", "Apps", "Demos"]);
+createCategoryButtons(["Games", "Apps", "Concepts"]);
 window.addEventListener("load", layoutProjects);
 window.addEventListener("resize", layoutProjects);
 layoutProjects();
