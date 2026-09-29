@@ -47,9 +47,6 @@ import ProjectCard from "../components/ProjectCard.astro";
         I'm a student in IT and engineering who likes to make apps and games and
         tinker around with Raspberry Pi and electronics.
       </p>
-      <p class="green">
-        <strong>Scroll down to see some of my creations!</strong>
-      </p>
       <p>
         <strong class="green">Like my work?</strong>{" "}
         <a class="link-button" href="https://buymeacoffee.com/phorb"
@@ -61,6 +58,9 @@ import ProjectCard from "../components/ProjectCard.astro";
         >
       </p>
 
+      <p class="green">
+        <strong>Scroll down to see some of my creations!</strong>
+      </p>
       <CategoryBar />
       <ProjectLayout>
         <ProjectCard
@@ -175,6 +175,28 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Concepts"
         />
         <ProjectCard
+          image="images/autocube.webp"
+          titleLink="https://github.com/iqnite/autocube"
+          title="Autocube"
+          description="
+            A 3x3x3 Rubik's cube solver that can either find solutions from a JSON representation 
+            or perform algorithms on a physical cube via a LEGO Mindstorms EV3 robot."
+          buttonLink="https://youtu.be/EfhrIaZWvno"
+          buttonText="Watch Demo"
+          category="Concepts"
+        />
+        <ProjectCard
+          image="images/vingram.webp"
+          titleLink="https://github.com/iqnite/vingram"
+          title="Vingram"
+          description="
+            A web-based diagramming tool that allows you to create diagrams with
+            the hand-drawn aesthetic from old science textbooks."
+          buttonLink="https://iqnite.github.io/vingram"
+          buttonText="Try it"
+          category="Apps"
+        />
+        <ProjectCard
           image="images/scratchos-x-cover.webp"
           titleLink="scratchos"
           title="ScratchOS X"
@@ -187,6 +209,19 @@ import ProjectCard from "../components/ProjectCard.astro";
           <a href="scratchos/changelog/">Change log</a>
         </ProjectCard>
         <ProjectCard
+          image="images/ufo_sgrognox_logo.webp"
+          titleLink="https://slashlab.itch.io/sgrognox"
+          title="UFO Sgrognox"
+          description="Fly through space, steal cars, and dodge comets, helicopters, other UFOs..."
+          buttonLink="https://slashlab.itch.io/sgrognox"
+          buttonText="Play"
+          category="Games"
+        >
+          <a href="https://github.com/iqnite/sgrognox"
+            ><img src="images/github.svg" title="GitHub" height="25" /></a
+          >
+        </ProjectCard>
+        <ProjectCard
           image="images/yeetme-banner.svg"
           titleLink="https://github.com/iqnite/MotionSound"
           title="Yeetme!"
@@ -196,6 +231,16 @@ import ProjectCard from "../components/ProjectCard.astro";
           buttonLink="https://github.com/iqnite/MotionSound/releases/latest"
           buttonText="Download"
           category="Games"
+        />
+        <ProjectCard
+          image="images/rbn-pal.webp"
+          titleLink="https://github.com/iqnite/rbn-pal"
+          title="RBN Pal"
+          description="
+            A browser extension that enhances the user experience on the Reverse Beacon Network."
+          buttonLink="https://github.com/iqnite/rbn-pal#installation"
+          buttonText="Install"
+          category="Apps"
         />
       </ProjectLayout>
 
