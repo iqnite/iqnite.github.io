@@ -26,18 +26,19 @@ img {
   color: #00e503;
 }
 
-a {
+a, .category-button {
   color: #00e503;
   border-radius: 3px;
   text-decoration: dashed underline;
   text-underline-offset: 2px;
+  font: inherit;
   transition:
     color 0.3s,
     background-color 0.3s,
     box-shadow 0.3s;
 }
 
-a:hover {
+a:hover, .category-button:hover {
   color: black;
   background-color: #00e503;
   box-shadow: 0 0 10px #00e503;

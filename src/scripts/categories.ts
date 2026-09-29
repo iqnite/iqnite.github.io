@@ -9,7 +9,7 @@ const activeCategories: string[] = [];
 function createCategoryButtons(categories: string[]) {
   if (!categoryBar) return;
   for (const category of categories) {
-    const button = document.createElement("a");
+    const button = document.createElement("button");
     button.textContent = category;
     button.classList.add("category-button");
     button.addEventListener("click", selectCategory);
