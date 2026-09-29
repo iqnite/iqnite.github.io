@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import "../styles/home.css";
+import { Image } from "astro:assets";
 
 const {
   title,
@@ -14,7 +15,7 @@ const {
 ---
 
 <div class="project-card vertical-banner" data-category={category}>
-  <img src={image} alt={title} class="project-img" />
+  <Image src={image} alt={title} class="project-img" />
   <div>
     <h3>
       <a href={titleLink}>{title}</a>
