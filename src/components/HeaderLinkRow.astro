@@ -1,0 +1,26 @@
+---
+import "../styles/style.css";
+import "../styles/home.css";
+import HeaderLink from "./HeaderLink.astro";
+import githubLogo from "../assets/github.svg";
+import itchioLogo from "../assets/itchio.svg";
+import scratchLogo from "../assets/scratch.svg";
+---
+
+<div class="row">
+  <HeaderLink
+    link="https://github.com/iqnite"
+    title="GitHub"
+    image={githubLogo}
+  />{" "}
+  <HeaderLink
+    link="https://slashlab.itch.io"
+    title="itch.io"
+    image={itchioLogo}
+  />{" "}
+  <HeaderLink
+    link="https://scratch.mit.edu/users/philipp2007"
+    title="Scratch"
+    image={scratchLogo}
+  />
+</div>

@@ -5,6 +5,12 @@ import MainHeader from "../components/MainHeader.astro";
 import CategoryBar from "../components/CategoryBar.astro";
 import ProjectLayout from "../components/ProjectLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import HeaderLinkRow from "../components/HeaderLinkRow.astro";
+import { Image } from "astro:assets";
+import bmcLogo from "../assets/bmc-logo.webp";
+import githubLogo from "../assets/github.svg";
+import scratchLogo from "../assets/scratch.svg";
+import youtubeLogo from "../assets/youtube.svg";
 ---
 
 <!doctype html>
@@ -50,10 +56,11 @@ import ProjectCard from "../components/ProjectCard.astro";
       <p>
         <strong class="green">Like my work?</strong>{" "}
         <a class="link-button" href="https://buymeacoffee.com/phorb"
-          ><img
-            src="images/bmc-logo.webp"
+          ><Image
+            src={bmcLogo}
             width="25"
             alt="Buy me a coffee logo"
+            loading="eager"
           />{" "}Buy me a coffee</a
         >
       </p>
@@ -77,8 +84,8 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Games"
         >
           <a href="eggsplode/github.html"
-            ><img
-              src="images/github.svg"
+            ><Image
+              src={githubLogo}
               title="GitHub"
               alt="GitHub"
               width="25"
@@ -99,8 +106,8 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Apps"
         >
           <a href="https://github.com/iqnite/yt-dlp-ui"
-            ><img
-              src="images/github.svg"
+            ><Image
+              src={githubLogo}
               title="GitHub"
               alt="GitHub"
               width="25"
@@ -118,8 +125,8 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Games"
         >
           <a href="https://youtu.be/Kzafrox2QRk"
-            ><img
-              src="images/youtube.svg"
+            ><Image
+              src={youtubeLogo}
               title="YouTube trailer"
               alt="YouTube"
               height="25"
@@ -137,16 +144,16 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Games"
         >
           <a href="https://scratch.mit.edu/projects/894848098/"
-            ><img
-              src="images/scratch.svg"
+            ><Image
+              src={scratchLogo}
               title="Scratch"
               alt="Scratch"
               height="25"
             /></a
           >{" "}
           <a href="https://youtu.be/_cRHvoG_YGY"
-            ><img
-              src="images/youtube.svg"
+            ><Image
+              src={youtubeLogo}
               title="YouTube trailer"
               alt="YouTube"
               height="25"
@@ -166,8 +173,8 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Apps"
         >
           <a href="https://github.com/iqnite/pyccd-spectrometer"
-            ><img
-              src="images/github.svg"
+            ><Image
+              src={githubLogo}
               title="GitHub"
               alt="GitHub"
               height="25"
@@ -240,8 +247,8 @@ import ProjectCard from "../components/ProjectCard.astro";
           category="Games"
         >
           <a href="https://github.com/iqnite/sgrognox"
-            ><img
-              src="images/github.svg"
+            ><Image
+              src={githubLogo}
               title="GitHub"
               alt="GitHub"
               height="25"
@@ -281,21 +288,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       </p>
       <h1>Want to see more?</h1>
       <div class="header-item side-by-side">
-        <div class="row">
-          <a class="row-item" href="https://github.com/iqnite" title="GitHub">
-            <img class="header-img" src="images/github.svg" alt="GitHub" /></a
-          >{" "}
-          <a class="row-item" href="https://slashlab.itch.io" title="itch.io">
-            <img class="header-img" src="images/itchio.svg" alt="itch.io" /></a
-          >{" "}
-          <a
-            class="row-item"
-            href="https://scratch.mit.edu/users/philipp2007"
-            title="Scratch"
-          >
-            <img class="header-img" src="images/scratch.svg" alt="Scratch" /></a
-          >
-        </div>
+        <HeaderLinkRow />
       </div>
     </main>
     <footer aria-label="Footer">
