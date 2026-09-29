@@ -6,8 +6,8 @@ const { title, description, image, titleLink, buttonText, buttonLink } =
   Astro.props;
 ---
 
-<div class="new-banner vertical-banner">
-  <img src={image} alt={title} />
+<div class="project-card vertical-banner">
+  <img src={image} alt={title} class="project-img" />
   <div>
     <h3>
       <a href={titleLink}>{title}</a>

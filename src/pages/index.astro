@@ -59,8 +59,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           />{" "}Buy me a coffee</a
         >
       </p>
-      <h2>Games</h2>
-      <div class="side-by-side">
+      <ProjectLayout>
         <ProjectCard
           image="images/eggsplode_banner.webp"
           titleLink="eggsplode"
@@ -114,9 +113,6 @@ import ProjectCard from "../components/ProjectCard.astro";
             /></a
           >
         </ProjectCard>
-      </div>
-      <h2>Utilities</h2>
-      <div class="side-by-side">
         <ProjectCard
           image="images/wyder-screenshot.webp"
           titleLink="wyder"
@@ -158,9 +154,6 @@ import ProjectCard from "../components/ProjectCard.astro";
           buttonLink="https://www.powershellgallery.com/packages/msix-no-cert"
           buttonText="Install"
         />
-      </div>
-      <h2>Fun Stuff</h2>
-      <div class="side-by-side">
         <ProjectCard
           image="images/spamojifactorial.webp"
           titleLink="https://github.com/iqnite/spamoji"
@@ -192,7 +185,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           buttonLink="https://github.com/iqnite/MotionSound/releases/latest"
           buttonText="Download"
         />
-      </div>
+      </ProjectLayout>
       <p>
         <img
           class="color-change"
