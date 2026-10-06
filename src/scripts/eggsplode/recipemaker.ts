@@ -5,6 +5,9 @@ const cardSearch = document.getElementById("card-search") as HTMLInputElement;
 const cardsPerPlayerInput = document.getElementById(
   "cards-per-player-input",
 ) as HTMLInputElement;
+const deckSizeInput = document.getElementById(
+  "deck-size-input",
+) as HTMLInputElement;
 const cardSelectionDiv = document.getElementById(
   "card-selection-div",
 ) as HTMLInputElement;
@@ -31,6 +34,7 @@ cardSearch.addEventListener("input", (e) =>
   populateCardSelection(cards, cardSearch.value),
 );
 cardsPerPlayerInput.addEventListener("input", generateRecipeCode);
+deckSizeInput.addEventListener("input", generateRecipeCode);
 copyCodeButton.addEventListener("click", copyRecipeCode);
 
 function populateCardSelection(cards: Record<string, Card>, filter = "") {
@@ -174,6 +178,11 @@ function generateRecipeCode() {
     recipe.cards_per_player = cardsPerPlayer;
   }
 
+  const deckSize = parseInt(deckSizeInput.value);
+  if (!isNaN(deckSize)) {
+    recipe.deck_size = deckSize;
+  }
+
   const cards: Record<string, CardRecipe | number> = {};
   for (const cardID in cardSelections) {
     let card: CardRecipe | number = {};
@@ -266,6 +275,7 @@ interface CardSelection {
 
 interface Recipe {
   cards_per_player?: number;
+  deck_size?: number;
   cards: Record<string, CardRecipe | number>;
 }
 
